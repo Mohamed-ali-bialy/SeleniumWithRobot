@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c798a23-f1ca-452e-a58b-c16c2468e8c4" name="Changes" comment="apply an abstraction layer for the first script">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/Helper.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RobotFrameWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RobotFrameWork.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3c798a23-f1ca-452e-a58b-c16c2468e8c4" name="Changes" comment="add dockerfile and requirements file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/SeleniumActions.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/locators.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/check_number_of_products_displayed.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/check_number_of_products_displayed.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_suite.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/verify-phone-details.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Helper.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Helper.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/SeleniumActions.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/SeleniumActions.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -433,12 +423,30 @@
       <option name="project" value="LOCAL" />
       <updated>1737655343837</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add another layer of abstraction, (selenium actions), split two scripts">
+      <option name="closed" value="true" />
+      <created>1737826543427</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737826543427</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add dockerfile and requirements file">
+      <option name="closed" value="true" />
+      <created>1737826615945</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737826615945</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <MESSAGE value="apply an abstraction layer for the first script" />
-    <option name="LAST_COMMIT_MESSAGE" value="apply an abstraction layer for the first script" />
+    <MESSAGE value="Add another layer of abstraction, (selenium actions), split two scripts" />
+    <MESSAGE value="add dockerfile and requirements file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dockerfile and requirements file" />
   </component>
 </project>

@@ -30,3 +30,10 @@ Get Elements Text
         Append To List    ${text_list}    ${text}
     END
     RETURN    ${text_list}
+
+Get Element Text
+     [Arguments]    ${locator}
+     Wait for Element to Be Visible and Enabled    ${locator}
+     ${WEB_ELEMENT} =    Get WebElement    ${locator}
+     ${TEXT}=    Get text    ${WEB_ELEMENT}
+     RETURN    ${TEXT}

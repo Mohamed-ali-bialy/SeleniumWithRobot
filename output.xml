@@ -1,242 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.12.8 on win32)" generated="2025-01-25T19:30:53.240542" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.12.8 on win32)" generated="2025-01-25T19:44:34.183503" rpa="false" schemaversion="5">
 <suite id="s1" name="Verify-Phone-Details" source="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot\tests\verify-phone-details.robot">
-<test id="s1-t1" name="Verify Phone Details" line="26">
+<test id="s1-t1" name="Verify Phone Details" line="17">
 <kw name="Open Demoblaze HomePage" owner="Helper">
 <kw name="Open Browser and Maximize" owner="SeleniumActions">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:30:53.483690" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-01-25T19:44:34.482714" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-25T19:30:53.483690" elapsed="3.677481"/>
+<status status="PASS" start="2025-01-25T19:44:34.482714" elapsed="6.617146"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-25T19:30:57.161171" elapsed="0.035089"/>
+<status status="PASS" start="2025-01-25T19:44:41.099860" elapsed="0.032729"/>
 </kw>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-01-25T19:30:53.483690" elapsed="3.712570"/>
+<status status="PASS" start="2025-01-25T19:44:34.482182" elapsed="6.650407"/>
 </kw>
-<status status="PASS" start="2025-01-25T19:30:53.482689" elapsed="3.714573"/>
+<status status="PASS" start="2025-01-25T19:44:34.481170" elapsed="6.651419"/>
 </kw>
 <kw name="Navigate To Phones Page" owner="Helper">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${PHONES_BUTTON}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-25T19:30:57.197262" elapsed="0.020246"/>
+<status status="PASS" start="2025-01-25T19:44:41.132589" elapsed="0.065002"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:30:57.218529" level="INFO">Clicking element 'xpath=//*[@onclick="byCat('phone')"]'.</msg>
+<msg time="2025-01-25T19:44:41.197591" level="INFO">Clicking element 'xpath=//*[@onclick="byCat('phone')"]'.</msg>
 <arg>${PHONES_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T19:30:57.217508" elapsed="0.047390"/>
+<status status="PASS" start="2025-01-25T19:44:41.197591" elapsed="0.053644"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Phones</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-25T19:30:57.264898" elapsed="0.010525"/>
+<status status="PASS" start="2025-01-25T19:44:41.252242" elapsed="0.007990"/>
 </kw>
-<status status="PASS" start="2025-01-25T19:30:57.197262" elapsed="0.079164"/>
+<status status="PASS" start="2025-01-25T19:44:41.132589" elapsed="0.127643"/>
 </kw>
 <kw name="Open Phone Details Page" owner="Helper">
 <kw name="Replace String" owner="String">
-<msg time="2025-01-25T19:30:57.276426" level="INFO">${formatted_xpath} = xpath=//a[text()='HTC One M9']</msg>
+<msg time="2025-01-25T19:44:41.260232" level="INFO">${formatted_xpath} = xpath=//a[text()='HTC One M9']</msg>
 <var>${formatted_xpath}</var>
 <arg>${TARGET_PHONE_ELEMENT}</arg>
 <arg>{product_name}</arg>
 <arg>${to_be_opened_phone_name}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-01-25T19:30:57.276426" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:41.260232" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${formatted_xpath}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-25T19:30:57.276426" elapsed="0.839057"/>
+<status status="PASS" start="2025-01-25T19:44:41.260232" elapsed="0.866802"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${formatted_xpath}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-25T19:30:58.116511" elapsed="0.013140"/>
+<status status="PASS" start="2025-01-25T19:44:42.127034" elapsed="0.013596"/>
 </kw>
 <kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:30:58.133241" level="INFO">${phone_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.DD0BB6B97EAD85380EC3AAE54DE77D40.e.83")&gt;</msg>
+<msg time="2025-01-25T19:44:42.144290" level="INFO">${phone_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="10b12079babb90bc4fb80e73f7df47fe", element="f.AB2A9A354EAC67C7FBEE7E7B3BA83A24.d.8D27DF6BE7631CD20FE97DD3C83A95CA.e.84")&gt;</msg>
 <var>${phone_element}</var>
 <arg>${formatted_xpath}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-01-25T19:30:58.129651" elapsed="0.003590"/>
+<status status="PASS" start="2025-01-25T19:44:42.140630" elapsed="0.003660"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:30:58.133241" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.DD0BB6B97EAD85380EC3AAE54DE77D40.e.83")&gt;'.</msg>
+<msg time="2025-01-25T19:44:42.145290" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="10b12079babb90bc4fb80e73f7df47fe", element="f.AB2A9A354EAC67C7FBEE7E7B3BA83A24.d.8D27DF6BE7631CD20FE97DD3C83A95CA.e.84")&gt;'.</msg>
 <arg>${phone_element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T19:30:58.133241" elapsed="2.634548"/>
+<status status="PASS" start="2025-01-25T19:44:42.145290" elapsed="0.726443"/>
 </kw>
 <arg>${product_name}</arg>
-<status status="PASS" start="2025-01-25T19:30:57.276426" elapsed="3.492062"/>
+<status status="PASS" start="2025-01-25T19:44:41.260232" elapsed="1.611501"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${PRODUCT_NAME_IN_PAGE}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-25T19:31:00.768488" elapsed="0.643529"/>
+<status status="PASS" start="2025-01-25T19:44:42.871733" elapsed="0.550227"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${PRODUCT_NAME_IN_PAGE}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.412017" elapsed="0.010128"/>
+<status status="PASS" start="2025-01-25T19:44:43.421960" elapsed="0.015044"/>
 </kw>
 <kw name="Get Phone Name From Details Page" owner="Helper">
+<kw name="Get Element Text" owner="SeleniumActions">
+<kw name="Wait for Element to Be Visible and Enabled" owner="SeleniumActions">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<arg>${locator}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.422145" elapsed="0.010250"/>
+<status status="PASS" start="2025-01-25T19:44:43.437004" elapsed="0.012000"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<arg>${locator}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.432395" elapsed="0.010206"/>
+<status status="PASS" start="2025-01-25T19:44:43.449004" elapsed="0.013259"/>
+</kw>
+<arg>${locator}</arg>
+<status status="PASS" start="2025-01-25T19:44:43.437004" elapsed="0.025259"/>
 </kw>
 <kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:31:01.446678" level="INFO">${PHONE_NAME} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.79CFA18CAEA8E0863D77F3164E28A21B.e.142")&gt;</msg>
-<var>${PHONE_NAME}</var>
-<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<msg time="2025-01-25T19:44:43.467262" level="INFO">${WEB_ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="10b12079babb90bc4fb80e73f7df47fe", element="f.AB2A9A354EAC67C7FBEE7E7B3BA83A24.d.E93D20153DE1C4ECFD5D17C8E5CED157.e.133")&gt;</msg>
+<var>${WEB_ELEMENT}</var>
+<arg>${locator}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.442601" elapsed="0.004077"/>
+<status status="PASS" start="2025-01-25T19:44:43.463283" elapsed="0.003979"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:31:01.456768" level="INFO">${PHONE_NAME_TEXT} = HTC One M9</msg>
-<var>${PHONE_NAME_TEXT}</var>
-<arg>${PHONE_NAME}</arg>
+<msg time="2025-01-25T19:44:43.475262" level="INFO">${TEXT} = HTC One M9</msg>
+<var>${TEXT}</var>
+<arg>${WEB_ELEMENT}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.446678" elapsed="0.010090"/>
+<status status="PASS" start="2025-01-25T19:44:43.467262" elapsed="0.008000"/>
+</kw>
+<return>
+<value>${TEXT}</value>
+<status status="PASS" start="2025-01-25T19:44:43.475262" elapsed="0.000000"/>
+</return>
+<msg time="2025-01-25T19:44:43.475262" level="INFO">${PHONE_NAME_TEXT} = HTC One M9</msg>
+<var>${PHONE_NAME_TEXT}</var>
+<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<status status="PASS" start="2025-01-25T19:44:43.437004" elapsed="0.038258"/>
 </kw>
 <return>
 <value>${PHONE_NAME_TEXT}</value>
-<status status="PASS" start="2025-01-25T19:31:01.456768" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.475262" elapsed="0.000000"/>
 </return>
-<msg time="2025-01-25T19:31:01.456768" level="INFO">${PHONE_NAME_TEXT} = HTC One M9</msg>
+<msg time="2025-01-25T19:44:43.475262" level="INFO">${PHONE_NAME_TEXT} = HTC One M9</msg>
 <var>${PHONE_NAME_TEXT}</var>
-<status status="PASS" start="2025-01-25T19:31:01.422145" elapsed="0.034623"/>
+<status status="PASS" start="2025-01-25T19:44:43.437004" elapsed="0.038258"/>
 </kw>
 <kw name="Get Phone Price From Details Page" owner="Helper">
+<kw name="Get Element Text" owner="SeleniumActions">
+<kw name="Wait for Element to Be Visible and Enabled" owner="SeleniumActions">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PRODUCT_PRICE}</arg>
+<arg>${locator}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.456768" elapsed="0.009893"/>
+<status status="PASS" start="2025-01-25T19:44:43.476281" elapsed="0.010376"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${PRODUCT_PRICE}</arg>
+<arg>${locator}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.466661" elapsed="0.010091"/>
+<status status="PASS" start="2025-01-25T19:44:43.486657" elapsed="0.011122"/>
+</kw>
+<arg>${locator}</arg>
+<status status="PASS" start="2025-01-25T19:44:43.476281" elapsed="0.021498"/>
 </kw>
 <kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:31:01.486744" level="INFO">${PHONE_PRICE} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.79CFA18CAEA8E0863D77F3164E28A21B.e.143")&gt;</msg>
-<var>${PHONE_PRICE}</var>
-<arg>${PRODUCT_PRICE}</arg>
+<msg time="2025-01-25T19:44:43.501816" level="INFO">${WEB_ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="10b12079babb90bc4fb80e73f7df47fe", element="f.AB2A9A354EAC67C7FBEE7E7B3BA83A24.d.E93D20153DE1C4ECFD5D17C8E5CED157.e.135")&gt;</msg>
+<var>${WEB_ELEMENT}</var>
+<arg>${locator}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.476752" elapsed="0.009992"/>
+<status status="PASS" start="2025-01-25T19:44:43.497779" elapsed="0.005057"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:31:01.486812" level="INFO">${PHONE_PRICE_TEXT} = $700 *includes tax</msg>
-<var>${PHONE_PRICE_TEXT}</var>
-<arg>${PHONE_PRICE}</arg>
+<msg time="2025-01-25T19:44:43.506817" level="INFO">${TEXT} = $700 *includes tax</msg>
+<var>${TEXT}</var>
+<arg>${WEB_ELEMENT}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.486812" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.502836" elapsed="0.003981"/>
+</kw>
+<return>
+<value>${TEXT}</value>
+<status status="PASS" start="2025-01-25T19:44:43.506817" elapsed="0.000000"/>
+</return>
+<msg time="2025-01-25T19:44:43.506817" level="INFO">${PHONE_PRICE_TEXT} = $700 *includes tax</msg>
+<var>${PHONE_PRICE_TEXT}</var>
+<arg>${PRODUCT_PRICE}</arg>
+<status status="PASS" start="2025-01-25T19:44:43.476281" elapsed="0.030536"/>
 </kw>
 <return>
 <value>${PHONE_PRICE_TEXT}</value>
-<status status="PASS" start="2025-01-25T19:31:01.486812" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.506817" elapsed="0.000000"/>
 </return>
-<msg time="2025-01-25T19:31:01.486812" level="INFO">${PHONE_PRICE_TEXT} = $700 *includes tax</msg>
+<msg time="2025-01-25T19:44:43.506817" level="INFO">${PHONE_PRICE_TEXT} = $700 *includes tax</msg>
 <var>${PHONE_PRICE_TEXT}</var>
-<status status="PASS" start="2025-01-25T19:31:01.456768" elapsed="0.030044"/>
+<status status="PASS" start="2025-01-25T19:44:43.475262" elapsed="0.031555"/>
 </kw>
 <kw name="Get Phone Description From Details Page" owner="Helper">
+<kw name="Get Element Text" owner="SeleniumActions">
+<kw name="Wait for Element to Be Visible and Enabled" owner="SeleniumActions">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PRODUCT_DESCRIPTION}</arg>
+<arg>${locator}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.486812" elapsed="0.009932"/>
+<status status="PASS" start="2025-01-25T19:44:43.507836" elapsed="0.010028"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${PRODUCT_DESCRIPTION}</arg>
+<arg>${locator}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.496744" elapsed="0.016925"/>
+<status status="PASS" start="2025-01-25T19:44:43.517864" elapsed="0.011102"/>
+</kw>
+<arg>${locator}</arg>
+<status status="PASS" start="2025-01-25T19:44:43.507836" elapsed="0.021130"/>
 </kw>
 <kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:31:01.516695" level="INFO">${PHONE_DESCRIPTION} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.79CFA18CAEA8E0863D77F3164E28A21B.e.144")&gt;</msg>
-<var>${PHONE_DESCRIPTION}</var>
-<arg>${PRODUCT_DESCRIPTION}</arg>
+<msg time="2025-01-25T19:44:43.534017" level="INFO">${WEB_ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="10b12079babb90bc4fb80e73f7df47fe", element="f.AB2A9A354EAC67C7FBEE7E7B3BA83A24.d.E93D20153DE1C4ECFD5D17C8E5CED157.e.136")&gt;</msg>
+<var>${WEB_ELEMENT}</var>
+<arg>${locator}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.513669" elapsed="0.003026"/>
+<status status="PASS" start="2025-01-25T19:44:43.528966" elapsed="0.005051"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-25T19:31:01.516695" level="INFO">${PHONE_DESCRIPTION_TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
-<var>${PHONE_DESCRIPTION_TEXT}</var>
-<arg>${PHONE_DESCRIPTION}</arg>
+<msg time="2025-01-25T19:44:43.538061" level="INFO">${TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
+<var>${TEXT}</var>
+<arg>${WEB_ELEMENT}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.516695" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.534017" elapsed="0.004044"/>
+</kw>
+<return>
+<value>${TEXT}</value>
+<status status="PASS" start="2025-01-25T19:44:43.538061" elapsed="0.000000"/>
+</return>
+<msg time="2025-01-25T19:44:43.538061" level="INFO">${PHONE_DESCRIPTION_TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
+<var>${PHONE_DESCRIPTION_TEXT}</var>
+<arg>${PRODUCT_DESCRIPTION}</arg>
+<status status="PASS" start="2025-01-25T19:44:43.507836" elapsed="0.030225"/>
 </kw>
 <return>
 <value>${PHONE_DESCRIPTION_TEXT}</value>
-<status status="PASS" start="2025-01-25T19:31:01.516695" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.538061" elapsed="0.000000"/>
 </return>
-<msg time="2025-01-25T19:31:01.522108" level="INFO">${PHONE_DESCRIPTION_TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
+<msg time="2025-01-25T19:44:43.539092" level="INFO">${PHONE_DESCRIPTION_TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
 <var>${PHONE_DESCRIPTION_TEXT}</var>
-<status status="PASS" start="2025-01-25T19:31:01.486812" elapsed="0.035296"/>
+<status status="PASS" start="2025-01-25T19:44:43.506817" elapsed="0.032275"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${PHONE_NAME_TEXT}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.522108" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.539092" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${PHONE_PRICE_TEXT}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.522108" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.539092" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${PHONE_DESCRIPTION_TEXT}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.522108" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.539092" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${PHONE_NAME_TEXT}</arg>
 <arg>${EXPECTED_PHONE_NAME}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.522644" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.539092" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${PHONE_PRICE_TEXT}</arg>
 <arg>${EXPECTED_PRICE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.522644" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.539092" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${PHONE_DESCRIPTION_TEXT}</arg>
 <arg>${EXPECTED_DESCRIPTION}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.522644" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:44:43.539092" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-25T19:31:01.522644" elapsed="2.260325"/>
+<status status="PASS" start="2025-01-25T19:44:43.540080" elapsed="2.285864"/>
 </kw>
-<status status="PASS" start="2025-01-25T19:30:53.482689" elapsed="10.300280"/>
+<status status="PASS" start="2025-01-25T19:44:34.481170" elapsed="11.344774"/>
 </test>
-<status status="PASS" start="2025-01-25T19:30:53.241898" elapsed="10.541071"/>
+<status status="PASS" start="2025-01-25T19:44:34.184668" elapsed="11.641276"/>
 </suite>
 <statistics>
 <total>

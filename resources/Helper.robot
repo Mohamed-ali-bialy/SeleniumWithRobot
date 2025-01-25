@@ -57,33 +57,17 @@ Open Phone Details Page
     Click Element    ${phone_element}
 
 Get Phone Name From Details Page
-    #wait until elements are visible and enabled
-    Wait Until Element Is Visible   ${PRODUCT_NAME_IN_PAGE}      ${WAIT_TIME}
-    Wait Until Element Is Enabled   ${PRODUCT_NAME_IN_PAGE}      ${WAIT_TIME}
-
-   ${PHONE_NAME} =    Get WebElement    ${PRODUCT_NAME_IN_PAGE}
-   ${PHONE_NAME_TEXT}=    Get text    ${PHONE_NAME}
-
+   ${PHONE_NAME_TEXT}=    Get Element Text  ${PRODUCT_NAME_IN_PAGE}
    RETURN      ${PHONE_NAME_TEXT}
 
 
 Get Phone Price From Details Page
-    #wait until elements are visible and enabled
-    Wait Until Element Is Visible   ${PRODUCT_PRICE}      ${WAIT_TIME}
-    Wait Until Element Is Enabled   ${PRODUCT_PRICE}      ${WAIT_TIME}
-
-   ${PHONE_PRICE} =    Get WebElement    ${PRODUCT_PRICE}
-   ${PHONE_PRICE_TEXT}=    Get text    ${PHONE_PRICE}
+   ${PHONE_PRICE_TEXT}=    Get Element Text  ${PRODUCT_PRICE}
    RETURN      ${PHONE_PRICE_TEXT}
 
 
 Get Phone Description From Details Page
-    #wait until elements are visible and enabled
-    Wait Until Element Is Visible   ${PRODUCT_DESCRIPTION}      ${WAIT_TIME}
-    Wait Until Element Is Enabled   ${PRODUCT_DESCRIPTION}      ${WAIT_TIME}
-
-   ${PHONE_DESCRIPTION} =    Get WebElement    ${PRODUCT_DESCRIPTION}
-   ${PHONE_DESCRIPTION_TEXT}=    Get text    ${PHONE_DESCRIPTION}
+   ${PHONE_DESCRIPTION_TEXT}=    Get Element Text  ${PRODUCT_DESCRIPTION}
    RETURN      ${PHONE_DESCRIPTION_TEXT}
 
 
