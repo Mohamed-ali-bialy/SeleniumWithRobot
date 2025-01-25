@@ -1,12 +1,12 @@
 *** Settings ***
-Resource          ../resources/keywords.robot
 Resource          ../resources/variables.robot
+Resource          ../resources/Helper.robot
+
 
 *** Test Cases ***
 Check Number Of Products Displayed
     #open browser and maximize the window
-    Open Browser and Maximize    ${URL}    ${BROWSER}
-
+    Open Demoblaze HomePage
 
     #get page products names
     ${FIRST_PAGE_PRODUCTS_NAMES}=    Get Card Elements Text

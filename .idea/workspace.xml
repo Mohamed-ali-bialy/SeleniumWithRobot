@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c798a23-f1ca-452e-a58b-c16c2468e8c4" name="Changes" comment="apply an abstraction layer for the first script">
-      <change afterPath="$PROJECT_DIR$/tests/test_suite.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Helper.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/RobotFrameWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RobotFrameWork.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/SeleniumActions.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/locators.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/check_number_of_products_displayed.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/check_number_of_products_displayed.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_suite.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/verify-phone-details.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +43,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Mohamed-ali-bialy/SeleniumWithRobot.git&quot;,
-    &quot;accountId&quot;: &quot;1c44b931-ab4c-44dc-9f76-44ec9ccc12a5&quot;
+    &quot;accountId&quot;: &quot;467dfbe0-ba91-42e1-b0ad-64ecd64fe9e3&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -55,16 +66,23 @@
     &quot;Python.[default] Save Names to List with Page Load Validation.executor&quot;: &quot;Run&quot;,
     &quot;Python.[default] Save Names to List with Pagination.executor&quot;: &quot;Run&quot;,
     &quot;Python.[default] Save Names to List.executor&quot;: &quot;Run&quot;,
+    &quot;Python.[default] Verify Phone Details.executor&quot;: &quot;Run&quot;,
     &quot;Python.[default] Verify Phones Category Button.executor&quot;: &quot;Run&quot;,
     &quot;Python.[default] Verify Search In Google.executor&quot;: &quot;Run&quot;,
     &quot;Python.check_number_of_products_displayed.robot.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_suite.robot.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;pyconsole&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.[default] Check Number Of Products Displayed">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.[default] Verify Phone Details">
     <configuration name="Check Number Of Products Displayed" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RobotFrameWork" />
       <option name="ENV_FILES" value="" />
@@ -139,7 +157,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/.venv/Scripts/python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -271,13 +289,13 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/.venv/Scripts/python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value=" -C ansi -v browser:chrome -t &quot;Verify Phone Details&quot; $PROJECT_DIR$/tests/test_suite.robot" />
+      <option name="PARAMETERS" value=" -C ansi -v browser:chrome -t &quot;Verify Phone Details&quot; $PROJECT_DIR$/tests/verify-phone-details.robot" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="true" />
@@ -375,10 +393,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.check_number_of_products_displayed.robot" />
-        <item itemvalue="Python.Check Number Of Products Displayed" />
-        <item itemvalue="Python.test_suite.robot" />
         <item itemvalue="Python.Verify Phone Details" />
+        <item itemvalue="Python.check_number_of_products_displayed.robot" />
+        <item itemvalue="Python.test_suite.robot" />
+        <item itemvalue="Python.Check Number Of Products Displayed" />
         <item itemvalue="Python.Verify Phones Category Button" />
       </list>
     </recent_temporary>
@@ -386,7 +404,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-1b1018131e27-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.180" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>

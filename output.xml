@@ -1,992 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.12.8 on win32)" generated="2025-01-23T19:57:17.093460" rpa="false" schemaversion="5">
-<suite id="s1" name="Check Number Of Products Displayed" source="C:\Users\z0052yyt\PycharmProjects\RobotFrameWork\tests\check_number_of_products_displayed.robot">
-<test id="s1-t1" name="Check Number Of Products Displayed" line="6">
-<kw name="Open Browser and Maximize" owner="keywords">
+<robot generator="Robot 7.2 (Python 3.12.8 on win32)" generated="2025-01-25T19:30:53.240542" rpa="false" schemaversion="5">
+<suite id="s1" name="Verify-Phone-Details" source="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot\tests\verify-phone-details.robot">
+<test id="s1-t1" name="Verify Phone Details" line="26">
+<kw name="Open Demoblaze HomePage" owner="Helper">
+<kw name="Open Browser and Maximize" owner="SeleniumActions">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:17.582775" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-01-25T19:30:53.483690" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-23T19:57:17.581775" elapsed="5.616156"/>
+<status status="PASS" start="2025-01-25T19:30:53.483690" elapsed="3.677481"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.198934" elapsed="0.293618"/>
+<status status="PASS" start="2025-01-25T19:30:57.161171" elapsed="0.035089"/>
 </kw>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-01-23T19:57:17.580780" elapsed="5.912765"/>
+<status status="PASS" start="2025-01-25T19:30:53.483690" elapsed="3.712570"/>
 </kw>
-<kw name="Get Card Elements Text" owner="keywords">
-<kw name="Wait for Element to Be Visible and Enabled" owner="keywords">
+<status status="PASS" start="2025-01-25T19:30:53.482689" elapsed="3.714573"/>
+</kw>
+<kw name="Navigate To Phones Page" owner="Helper">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
+<arg>${PHONES_BUTTON}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.494549" elapsed="0.381159"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${WAIT_TIME}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.876707" elapsed="0.044513"/>
-</kw>
-<arg>${PRODUCT_CARDS_LOCATOR}</arg>
-<status status="PASS" start="2025-01-23T19:57:23.494549" elapsed="0.427674"/>
-</kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:23.937221" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${elements}</var>
-<arg>${PRODUCT_CARDS_LOCATOR}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.922223" elapsed="0.014998"/>
-</kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2025-01-23T19:57:23.938221" level="INFO">${text_list} = []</msg>
-<var>${text_list}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.938221" elapsed="0.000000"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:23.964218" level="INFO">${text} = Samsung galaxy s6</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.939224" elapsed="0.024994"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.965218" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:23.939224" elapsed="0.025994"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:23.981236" level="INFO">${text} = Nokia lumia 1520</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.966217" elapsed="0.015019"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.981236" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.71")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:23.966217" elapsed="0.015019"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:23.997763" level="INFO">${text} = Nexus 6</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.982751" elapsed="0.015012"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.998766" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.72")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:23.982751" elapsed="0.016015"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.018763" level="INFO">${text} = Samsung galaxy s7</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:23.999771" elapsed="0.018992"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.018763" elapsed="0.001000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.73")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:23.999771" elapsed="0.019992"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.128293" level="INFO">${text} = Iphone 6 32gb</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.020773" elapsed="0.107520"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.129294" elapsed="0.000999"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.74")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:24.019763" elapsed="0.110530"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.268857" level="INFO">${text} = Sony xperia z5</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.130293" elapsed="0.138564"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.268857" elapsed="0.000998"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.75")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:24.130293" elapsed="0.139562"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.284369" level="INFO">${text} = HTC One M9</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.270854" elapsed="0.013515"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.285373" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.76")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:24.269855" elapsed="0.016523"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.302373" level="INFO">${text} = Sony vaio i5</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.286378" elapsed="0.015995"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.303371" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.77")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:24.286378" elapsed="0.016993"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.318373" level="INFO">${text} = Sony vaio i7</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.304371" elapsed="0.014002"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.319371" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.78")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:24.303371" elapsed="0.016000"/>
-</iter>
-<var>${element}</var>
-<value>@{elements}</value>
-<status status="PASS" start="2025-01-23T19:57:23.938221" elapsed="0.382152"/>
-</for>
-<return>
-<value>${text_list}</value>
-<status status="PASS" start="2025-01-23T19:57:24.320373" elapsed="0.000000"/>
-</return>
-<msg time="2025-01-23T19:57:24.320373" level="INFO">${FIRST_PAGE_PRODUCTS_NAMES} = ['Samsung galaxy s6', 'Nokia lumia 1520', 'Nexus 6', 'Samsung galaxy s7', 'Iphone 6 32gb', 'Sony xperia z5', 'HTC One M9', 'Sony vaio i5', 'Sony vaio i7']</msg>
-<var>${FIRST_PAGE_PRODUCTS_NAMES}</var>
-<status status="PASS" start="2025-01-23T19:57:23.493545" elapsed="0.826828"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>FIRST_PAGE_PRODUCTS_NAMES: ${FIRST_PAGE_PRODUCTS_NAMES}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.321369" elapsed="0.000000"/>
-</kw>
-<kw name="Navigate and Wait for New Page" owner="keywords">
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.341370" level="INFO">${old_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${old_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.322370" elapsed="0.019000"/>
+<status status="PASS" start="2025-01-25T19:30:57.197262" elapsed="0.020246"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.342376" level="INFO">Clicking element 'xpath=//*[contains(@id,'next2')]'.</msg>
-<arg>${next_button_locator}</arg>
+<msg time="2025-01-25T19:30:57.218529" level="INFO">Clicking element 'xpath=//*[@onclick="byCat('phone')"]'.</msg>
+<arg>${PHONES_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.341370" elapsed="0.311646"/>
+<status status="PASS" start="2025-01-25T19:30:57.217508" elapsed="0.047390"/>
 </kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.672008" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.654000" elapsed="0.018008"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Phones</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-25T19:30:57.264898" elapsed="0.010525"/>
 </kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.672008" elapsed="0.001000"/>
+<status status="PASS" start="2025-01-25T19:30:57.197262" elapsed="0.079164"/>
 </kw>
-<var name="${counter}">0</var>
-<status status="PASS" start="2025-01-23T19:57:24.653016" elapsed="0.019992"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.692523" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.674008" elapsed="0.019516"/>
+<kw name="Open Phone Details Page" owner="Helper">
+<kw name="Replace String" owner="String">
+<msg time="2025-01-25T19:30:57.276426" level="INFO">${formatted_xpath} = xpath=//a[text()='HTC One M9']</msg>
+<var>${formatted_xpath}</var>
+<arg>${TARGET_PHONE_ELEMENT}</arg>
+<arg>{product_name}</arg>
+<arg>${to_be_opened_phone_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-01-25T19:30:57.276426" elapsed="0.000000"/>
 </kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.693524" elapsed="0.001000"/>
-</kw>
-<var name="${counter}">1</var>
-<status status="PASS" start="2025-01-23T19:57:24.673008" elapsed="0.021516"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.710523" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.694524" elapsed="0.016999"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.711523" elapsed="0.000999"/>
-</kw>
-<var name="${counter}">2</var>
-<status status="PASS" start="2025-01-23T19:57:24.694524" elapsed="0.017998"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.726523" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.712522" elapsed="0.014001"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.727527" elapsed="0.000000"/>
-</kw>
-<var name="${counter}">3</var>
-<status status="PASS" start="2025-01-23T19:57:24.712522" elapsed="0.015005"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.742526" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.728521" elapsed="0.014005"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.742526" elapsed="0.000997"/>
-</kw>
-<var name="${counter}">4</var>
-<status status="PASS" start="2025-01-23T19:57:24.728521" elapsed="0.015002"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.757523" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.743523" elapsed="0.014000"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.757523" elapsed="0.001000"/>
-</kw>
-<var name="${counter}">5</var>
-<status status="PASS" start="2025-01-23T19:57:24.743523" elapsed="0.015000"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.773532" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.759522" elapsed="0.014010"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.774533" elapsed="0.000000"/>
-</kw>
-<var name="${counter}">6</var>
-<status status="PASS" start="2025-01-23T19:57:24.758523" elapsed="0.016010"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.790050" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.775529" elapsed="0.014521"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.790050" elapsed="0.001000"/>
-</kw>
-<var name="${counter}">7</var>
-<status status="PASS" start="2025-01-23T19:57:24.775529" elapsed="0.015521"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.805051" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.791050" elapsed="0.014001"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.805051" elapsed="0.000997"/>
-</kw>
-<var name="${counter}">8</var>
-<status status="PASS" start="2025-01-23T19:57:24.791050" elapsed="0.014998"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.820051" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.807053" elapsed="0.012998"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.821049" elapsed="0.000998"/>
-</kw>
-<var name="${counter}">9</var>
-<status status="PASS" start="2025-01-23T19:57:24.806048" elapsed="0.015999"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.836057" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.822047" elapsed="0.014010"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.836057" elapsed="0.000995"/>
-</kw>
-<var name="${counter}">10</var>
-<status status="PASS" start="2025-01-23T19:57:24.822047" elapsed="0.015005"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.852051" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.838048" elapsed="0.014003"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.852051" elapsed="0.001000"/>
-</kw>
-<var name="${counter}">11</var>
-<status status="PASS" start="2025-01-23T19:57:24.838048" elapsed="0.015003"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.871062" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.854046" elapsed="0.017016"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.872064" elapsed="0.001001"/>
-</kw>
-<var name="${counter}">12</var>
-<status status="PASS" start="2025-01-23T19:57:24.854046" elapsed="0.019019"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.886703" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.873065" elapsed="0.013638"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.887702" elapsed="0.000000"/>
-</kw>
-<var name="${counter}">13</var>
-<status status="PASS" start="2025-01-23T19:57:24.873065" elapsed="0.014637"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.902709" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.888702" elapsed="0.014007"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.902709" elapsed="0.000991"/>
-</kw>
-<var name="${counter}">14</var>
-<status status="PASS" start="2025-01-23T19:57:24.888702" elapsed="0.014998"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.919705" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.904702" elapsed="0.015003"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.919705" elapsed="0.001000"/>
-</kw>
-<var name="${counter}">15</var>
-<status status="PASS" start="2025-01-23T19:57:24.903700" elapsed="0.017005"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.935704" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.920705" elapsed="0.014999"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.935704" elapsed="0.001000"/>
-</kw>
-<var name="${counter}">16</var>
-<status status="PASS" start="2025-01-23T19:57:24.920705" elapsed="0.015999"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.950703" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.937703" elapsed="0.013000"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.951704" elapsed="0.000000"/>
-</kw>
-<var name="${counter}">17</var>
-<status status="PASS" start="2025-01-23T19:57:24.936704" elapsed="0.015000"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.966703" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.952704" elapsed="0.013999"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.966703" elapsed="0.000998"/>
-</kw>
-<var name="${counter}">18</var>
-<status status="PASS" start="2025-01-23T19:57:24.952704" elapsed="0.014997"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.981714" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.967701" elapsed="0.014013"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.981714" elapsed="0.001511"/>
-</kw>
-<var name="${counter}">19</var>
-<status status="PASS" start="2025-01-23T19:57:24.967701" elapsed="0.015524"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:24.999238" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:24.984239" elapsed="0.014999"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.000236" elapsed="0.000000"/>
-</kw>
-<var name="${counter}">20</var>
-<status status="PASS" start="2025-01-23T19:57:24.983225" elapsed="0.017011"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.016277" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.001239" elapsed="0.015038"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.017274" elapsed="0.000000"/>
-</kw>
-<var name="${counter}">21</var>
-<status status="PASS" start="2025-01-23T19:57:25.001239" elapsed="0.017039"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.033278" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.018278" elapsed="0.015000"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.034272" elapsed="0.000000"/>
-</kw>
-<var name="${counter}">22</var>
-<status status="PASS" start="2025-01-23T19:57:25.018278" elapsed="0.016994"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.100889" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.93")&gt;, &lt;selenium.webdriv...</msg>
-<var>${new_elements}</var>
-<arg>${old_elements_locator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.035272" elapsed="0.065617"/>
-</kw>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<msg time="2025-01-23T19:57:25.101887" level="INFO">Exiting for loop altogether.</msg>
-<arg>'${old_elements}' != '${new_elements}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.101887" elapsed="0.000999"/>
-</kw>
-<var name="${counter}">23</var>
-<status status="PASS" start="2025-01-23T19:57:25.035272" elapsed="0.067614"/>
-</iter>
-<var>${counter}</var>
-<value>0</value>
-<value>${INFINITE_NUMBER}</value>
-<status status="PASS" start="2025-01-23T19:57:24.653016" elapsed="0.449870"/>
-</for>
-<status status="PASS" start="2025-01-23T19:57:24.322370" elapsed="0.780516"/>
-</kw>
-<kw name="Get Card Elements Text" owner="keywords">
-<kw name="Wait for Element to Be Visible and Enabled" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
+<arg>${formatted_xpath}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.104886" elapsed="0.035002"/>
+<status status="PASS" start="2025-01-25T19:30:57.276426" elapsed="0.839057"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
+<arg>${formatted_xpath}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.139888" elapsed="0.046536"/>
+<status status="PASS" start="2025-01-25T19:30:58.116511" elapsed="0.013140"/>
 </kw>
-<arg>${PRODUCT_CARDS_LOCATOR}</arg>
-<status status="PASS" start="2025-01-23T19:57:25.103887" elapsed="0.082537"/>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-25T19:30:58.133241" level="INFO">${phone_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.DD0BB6B97EAD85380EC3AAE54DE77D40.e.83")&gt;</msg>
+<var>${phone_element}</var>
+<arg>${formatted_xpath}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-25T19:30:58.129651" elapsed="0.003590"/>
 </kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.201424" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.93")&gt;, &lt;selenium.webdriv...</msg>
-<var>${elements}</var>
-<arg>${PRODUCT_CARDS_LOCATOR}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.187428" elapsed="0.015003"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-25T19:30:58.133241" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.DD0BB6B97EAD85380EC3AAE54DE77D40.e.83")&gt;'.</msg>
+<arg>${phone_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-25T19:30:58.133241" elapsed="2.634548"/>
 </kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2025-01-23T19:57:25.202431" level="INFO">${text_list} = []</msg>
-<var>${text_list}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.202431" elapsed="0.000000"/>
+<arg>${product_name}</arg>
+<status status="PASS" start="2025-01-25T19:30:57.276426" elapsed="3.492062"/>
 </kw>
-<for flavor="IN">
-<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-25T19:31:00.768488" elapsed="0.643529"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.412017" elapsed="0.010128"/>
+</kw>
+<kw name="Get Phone Name From Details Page" owner="Helper">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.422145" elapsed="0.010250"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.432395" elapsed="0.010206"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-25T19:31:01.446678" level="INFO">${PHONE_NAME} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.79CFA18CAEA8E0863D77F3164E28A21B.e.142")&gt;</msg>
+<var>${PHONE_NAME}</var>
+<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.442601" elapsed="0.004077"/>
+</kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.227426" level="INFO">${text} = Apple monitor 24</msg>
-<var>${text}</var>
-<arg>${element}</arg>
+<msg time="2025-01-25T19:31:01.456768" level="INFO">${PHONE_NAME_TEXT} = HTC One M9</msg>
+<var>${PHONE_NAME_TEXT}</var>
+<arg>${PHONE_NAME}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.203424" elapsed="0.024002"/>
+<status status="PASS" start="2025-01-25T19:31:01.446678" elapsed="0.010090"/>
 </kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.227426" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.93")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:25.203424" elapsed="0.024002"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.243423" level="INFO">${text} = MacBook air</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.228424" elapsed="0.014999"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.244431" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.94")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:25.228424" elapsed="0.016007"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.266425" level="INFO">${text} = Dell i7 8gb</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.245425" elapsed="0.021000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.266425" elapsed="0.000999"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.95")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:25.244431" elapsed="0.022993"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.282437" level="INFO">${text} = 2017 Dell 15.6 Inch</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.267424" elapsed="0.015013"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.283440" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.96")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:25.267424" elapsed="0.016016"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.298960" level="INFO">${text} = ASUS Full HD</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.283949" elapsed="0.015011"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.298960" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.97")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:25.283949" elapsed="0.015011"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-23T19:57:25.314961" level="INFO">${text} = MacBook Pro</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.299959" elapsed="0.015002"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${text_list}</arg>
-<arg>${text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.314961" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d26618d5d1c2402af15a0263db551744", element="f.B495287EDC36AA54A194E92F0F130D41.d.A113BD0E5B51D7584A865EDE9E7C893F.e.98")&gt;</var>
-<status status="PASS" start="2025-01-23T19:57:25.299959" elapsed="0.015002"/>
-</iter>
-<var>${element}</var>
-<value>@{elements}</value>
-<status status="PASS" start="2025-01-23T19:57:25.202431" elapsed="0.113530"/>
-</for>
 <return>
-<value>${text_list}</value>
-<status status="PASS" start="2025-01-23T19:57:25.315961" elapsed="0.000000"/>
+<value>${PHONE_NAME_TEXT}</value>
+<status status="PASS" start="2025-01-25T19:31:01.456768" elapsed="0.000000"/>
 </return>
-<msg time="2025-01-23T19:57:25.315961" level="INFO">${SECOND_PAGE_PRODUCTS_NAMES} = ['Apple monitor 24', 'MacBook air', 'Dell i7 8gb', '2017 Dell 15.6 Inch', 'ASUS Full HD', 'MacBook Pro']</msg>
-<var>${SECOND_PAGE_PRODUCTS_NAMES}</var>
-<status status="PASS" start="2025-01-23T19:57:25.103887" elapsed="0.212074"/>
+<msg time="2025-01-25T19:31:01.456768" level="INFO">${PHONE_NAME_TEXT} = HTC One M9</msg>
+<var>${PHONE_NAME_TEXT}</var>
+<status status="PASS" start="2025-01-25T19:31:01.422145" elapsed="0.034623"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>SECOND_PAGE_PRODUCTS_NAMES: ${SECOND_PAGE_PRODUCTS_NAMES}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.315961" elapsed="0.000997"/>
+<kw name="Get Phone Price From Details Page" owner="Helper">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PRODUCT_PRICE}</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.456768" elapsed="0.009893"/>
 </kw>
-<kw name="Merge Lists" owner="keywords">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2025-01-23T19:57:25.317959" level="INFO">${merged_list} = []</msg>
-<var>${merged_list}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.317959" elapsed="0.000999"/>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${PRODUCT_PRICE}</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.466661" elapsed="0.010091"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.318958" elapsed="0.001000"/>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-25T19:31:01.486744" level="INFO">${PHONE_PRICE} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.79CFA18CAEA8E0863D77F3164E28A21B.e.143")&gt;</msg>
+<var>${PHONE_PRICE}</var>
+<arg>${PRODUCT_PRICE}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.476752" elapsed="0.009992"/>
 </kw>
-<var name="${item}">Samsung galaxy s6</var>
-<status status="PASS" start="2025-01-23T19:57:25.318958" elapsed="0.001000"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.319958" elapsed="0.000000"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-25T19:31:01.486812" level="INFO">${PHONE_PRICE_TEXT} = $700 *includes tax</msg>
+<var>${PHONE_PRICE_TEXT}</var>
+<arg>${PHONE_PRICE}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.486812" elapsed="0.000000"/>
 </kw>
-<var name="${item}">Nokia lumia 1520</var>
-<status status="PASS" start="2025-01-23T19:57:25.319958" elapsed="0.001000"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.320958" elapsed="0.000000"/>
-</kw>
-<var name="${item}">Nexus 6</var>
-<status status="PASS" start="2025-01-23T19:57:25.320958" elapsed="0.000000"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.321960" elapsed="0.000000"/>
-</kw>
-<var name="${item}">Samsung galaxy s7</var>
-<status status="PASS" start="2025-01-23T19:57:25.321960" elapsed="0.000000"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.322959" elapsed="0.000000"/>
-</kw>
-<var name="${item}">Iphone 6 32gb</var>
-<status status="PASS" start="2025-01-23T19:57:25.321960" elapsed="0.000999"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.322959" elapsed="0.001002"/>
-</kw>
-<var name="${item}">Sony xperia z5</var>
-<status status="PASS" start="2025-01-23T19:57:25.322959" elapsed="0.001002"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.323961" elapsed="0.000999"/>
-</kw>
-<var name="${item}">HTC One M9</var>
-<status status="PASS" start="2025-01-23T19:57:25.323961" elapsed="0.000999"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.324960" elapsed="0.001008"/>
-</kw>
-<var name="${item}">Sony vaio i5</var>
-<status status="PASS" start="2025-01-23T19:57:25.324960" elapsed="0.001008"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.325968" elapsed="0.000000"/>
-</kw>
-<var name="${item}">Sony vaio i7</var>
-<status status="PASS" start="2025-01-23T19:57:25.325968" elapsed="0.000991"/>
-</iter>
-<var>${item}</var>
-<value>@{list1}</value>
-<status status="PASS" start="2025-01-23T19:57:25.318958" elapsed="0.008001"/>
-</for>
-<for flavor="IN">
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.326959" elapsed="0.000999"/>
-</kw>
-<var name="${item}">Apple monitor 24</var>
-<status status="PASS" start="2025-01-23T19:57:25.326959" elapsed="0.000999"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.327958" elapsed="0.000000"/>
-</kw>
-<var name="${item}">MacBook air</var>
-<status status="PASS" start="2025-01-23T19:57:25.327958" elapsed="0.001000"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.328958" elapsed="0.000000"/>
-</kw>
-<var name="${item}">Dell i7 8gb</var>
-<status status="PASS" start="2025-01-23T19:57:25.328958" elapsed="0.000000"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.329959" elapsed="0.000000"/>
-</kw>
-<var name="${item}">2017 Dell 15.6 Inch</var>
-<status status="PASS" start="2025-01-23T19:57:25.329959" elapsed="0.000000"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.330958" elapsed="0.000000"/>
-</kw>
-<var name="${item}">ASUS Full HD</var>
-<status status="PASS" start="2025-01-23T19:57:25.329959" elapsed="0.000999"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${merged_list}</arg>
-<arg>${item}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.331958" elapsed="0.000000"/>
-</kw>
-<var name="${item}">MacBook Pro</var>
-<status status="PASS" start="2025-01-23T19:57:25.330958" elapsed="0.001000"/>
-</iter>
-<var>${item}</var>
-<value>@{list2}</value>
-<status status="PASS" start="2025-01-23T19:57:25.326959" elapsed="0.004999"/>
-</for>
 <return>
-<value>${merged_list}</value>
-<status status="PASS" start="2025-01-23T19:57:25.331958" elapsed="0.000000"/>
+<value>${PHONE_PRICE_TEXT}</value>
+<status status="PASS" start="2025-01-25T19:31:01.486812" elapsed="0.000000"/>
 </return>
-<msg time="2025-01-23T19:57:25.332959" level="INFO">${ALL_PRODUCTS_NAMES} = ['Samsung galaxy s6', 'Nokia lumia 1520', 'Nexus 6', 'Samsung galaxy s7', 'Iphone 6 32gb', 'Sony xperia z5', 'HTC One M9', 'Sony vaio i5', 'Sony vaio i7', 'Apple monitor 24', 'MacBook air', 'Dell i7 8...</msg>
-<var>${ALL_PRODUCTS_NAMES}</var>
-<arg>${FIRST_PAGE_PRODUCTS_NAMES}</arg>
-<arg>${SECOND_PAGE_PRODUCTS_NAMES}</arg>
-<status status="PASS" start="2025-01-23T19:57:25.316958" elapsed="0.016001"/>
+<msg time="2025-01-25T19:31:01.486812" level="INFO">${PHONE_PRICE_TEXT} = $700 *includes tax</msg>
+<var>${PHONE_PRICE_TEXT}</var>
+<status status="PASS" start="2025-01-25T19:31:01.456768" elapsed="0.030044"/>
 </kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2025-01-23T19:57:25.332959" level="INFO">Length is 15.</msg>
-<msg time="2025-01-23T19:57:25.333958" level="INFO">${ALL_PRODUCTS_NAMES_COUNT} = 15</msg>
-<var>${ALL_PRODUCTS_NAMES_COUNT}</var>
-<arg>${ALL_PRODUCTS_NAMES}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.332959" elapsed="0.000999"/>
+<kw name="Get Phone Description From Details Page" owner="Helper">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PRODUCT_DESCRIPTION}</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.486812" elapsed="0.009932"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${PRODUCT_DESCRIPTION}</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.496744" elapsed="0.016925"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-25T19:31:01.516695" level="INFO">${PHONE_DESCRIPTION} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00e132ac61e9a5a977e6ecad6c90d4dd", element="f.D00E37052817BA98440A96D146496208.d.79CFA18CAEA8E0863D77F3164E28A21B.e.144")&gt;</msg>
+<var>${PHONE_DESCRIPTION}</var>
+<arg>${PRODUCT_DESCRIPTION}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.513669" elapsed="0.003026"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-25T19:31:01.516695" level="INFO">${PHONE_DESCRIPTION_TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
+<var>${PHONE_DESCRIPTION_TEXT}</var>
+<arg>${PHONE_DESCRIPTION}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.516695" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${PHONE_DESCRIPTION_TEXT}</value>
+<status status="PASS" start="2025-01-25T19:31:01.516695" elapsed="0.000000"/>
+</return>
+<msg time="2025-01-25T19:31:01.522108" level="INFO">${PHONE_DESCRIPTION_TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
+<var>${PHONE_DESCRIPTION_TEXT}</var>
+<status status="PASS" start="2025-01-25T19:31:01.486812" elapsed="0.035296"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>all products: ${ALL_PRODUCTS_NAMES}</arg>
+<arg>${PHONE_NAME_TEXT}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.333958" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:31:01.522108" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>all products length:${ALL_PRODUCTS_NAMES_COUNT}</arg>
+<arg>${PHONE_PRICE_TEXT}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.334962" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T19:31:01.522108" elapsed="0.000000"/>
 </kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2025-01-23T19:57:25.335966" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${ALL_PRODUCTS_NAMES_COUNT}</arg>
-<arg>${NUMBER_OF_EXPECTED_PRODUCTS}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.334962" elapsed="0.001004"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${PHONE_DESCRIPTION_TEXT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.522108" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${PHONE_NAME_TEXT}</arg>
+<arg>${EXPECTED_PHONE_NAME}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.522644" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${PHONE_PRICE_TEXT}</arg>
+<arg>${EXPECTED_PRICE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.522644" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${PHONE_DESCRIPTION_TEXT}</arg>
+<arg>${EXPECTED_DESCRIPTION}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-25T19:31:01.522644" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-23T19:57:25.335966" elapsed="5.455823"/>
+<status status="PASS" start="2025-01-25T19:31:01.522644" elapsed="2.260325"/>
 </kw>
-<status status="PASS" start="2025-01-23T19:57:17.580780" elapsed="13.211009"/>
+<status status="PASS" start="2025-01-25T19:30:53.482689" elapsed="10.300280"/>
 </test>
-<status status="PASS" start="2025-01-23T19:57:17.095506" elapsed="13.697343"/>
+<status status="PASS" start="2025-01-25T19:30:53.241898" elapsed="10.541071"/>
 </suite>
 <statistics>
 <total>
@@ -995,7 +245,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Check Number Of Products Displayed" id="s1" pass="1" fail="0" skip="0">Check Number Of Products Displayed</stat>
+<stat name="Verify-Phone-Details" id="s1" pass="1" fail="0" skip="0">Verify-Phone-Details</stat>
 </suite>
 </statistics>
 <errors>

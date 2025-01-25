@@ -7,3 +7,4 @@ ${NEXT_BUTTON_LOCATOR}         xpath=//*[contains(@id,'next2')]
 ${PRODUCT_NAME_IN_PAGE}    xpath=//h2[@class='name']
 ${PRODUCT_PRICE}          xpath=//h3[@class='price-container']
 ${PRODUCT_DESCRIPTION}    xpath=//div[@id='more-information']//p
+${TARGET_PHONE_ELEMENT}    xpath=//a[text()='{product_name}']
