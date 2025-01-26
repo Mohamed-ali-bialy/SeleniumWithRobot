@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c798a23-f1ca-452e-a58b-c16c2468e8c4" name="Changes" comment="removed unneeded wait from test">
-      <change afterPath="$PROJECT_DIR$/products.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RobotFrameWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RobotFrameWork.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3c798a23-f1ca-452e-a58b-c16c2468e8c4" name="Changes" comment="add Excel file to project">
+      <change afterPath="$PROJECT_DIR$/productData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/JsonHelper.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/veridy_phone_details_with_json_file.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/variables.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/variables.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/verify-phone-details.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/verify_phone_details.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +36,12 @@
     &quot;assignee&quot;: &quot;Mohamed-ali-bialy&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Mohamed-ali-bialy/SeleniumWithRobot.git&quot;,
-    &quot;accountId&quot;: &quot;467dfbe0-ba91-42e1-b0ad-64ecd64fe9e3&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mohamed-ali-bialy/SeleniumWithRobot.git",
+    "accountId": "1c44b931-ab4c-44dc-9f76-44ec9ccc12a5"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -49,56 +51,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Check Number Of Products Displayed.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Get Text of All Elements on Home Screen.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Verify Phone Details.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Verify Phones Category Button.executor&quot;: &quot;Run&quot;,
-    &quot;Python.[default] Check Number Of Products Displayed.executor&quot;: &quot;Run&quot;,
-    &quot;Python.[default] Get Text of All Elements on Home Screen.executor&quot;: &quot;Run&quot;,
-    &quot;Python.[default] Save Names to List with Page Load Validation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.[default] Save Names to List with Pagination.executor&quot;: &quot;Run&quot;,
-    &quot;Python.[default] Save Names to List.executor&quot;: &quot;Run&quot;,
-    &quot;Python.[default] Verify Phone Details.executor&quot;: &quot;Run&quot;,
-    &quot;Python.[default] Verify Phones Category Button.executor&quot;: &quot;Run&quot;,
-    &quot;Python.[default] Verify Search In Google.executor&quot;: &quot;Run&quot;,
-    &quot;Python.check_number_of_products_displayed.robot.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_suite.robot.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;pyconsole&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Check Number Of Products Displayed.executor": "Run",
+    "Python.Get Text of All Elements on Home Screen.executor": "Run",
+    "Python.Verify Phone Details.executor": "Run",
+    "Python.Verify Phones Category Button.executor": "Run",
+    "Python.[default] Check Number Of Products Displayed.executor": "Run",
+    "Python.[default] Extract Product Data.executor": "Run",
+    "Python.[default] Extract Test Data.executor": "Run",
+    "Python.[default] Get Text of All Elements on Home Screen.executor": "Run",
+    "Python.[default] Save Names to List with Page Load Validation.executor": "Run",
+    "Python.[default] Save Names to List with Pagination.executor": "Run",
+    "Python.[default] Save Names to List.executor": "Run",
+    "Python.[default] Verify Phone Details.executor": "Run",
+    "Python.[default] Verify Phones Category Button.executor": "Run",
+    "Python.[default] Verify Search In Google.executor": "Run",
+    "Python.check_number_of_products_displayed.robot.executor": "Run",
+    "Python.testJson.robot.executor": "Run",
+    "Python.test_suite.robot.executor": "Run",
+    "Python.veridy_phone_details_with_json_file.robot.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/z0052yyt/PycharmProjects/SeleniumWithRobot",
+    "settings.editor.selected.configurable": "pyconsole"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.[default] Verify Phone Details">
-    <configuration name="Check Number Of Products Displayed" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="RobotFrameWork" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value=" -C ansi -v browser:chrome --test &quot;Check Number Of Products Displayed&quot; $PROJECT_DIR$/tests/test_suite.robot" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="true" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.veridy_phone_details_with_json_file.robot">
     <configuration name="Verify Phone Details" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RobotFrameWork" />
       <option name="ENV_FILES" value="" />
@@ -121,28 +109,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Verify Phones Category Button" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="RobotFrameWork" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value=" -C ansi -v browser:chrome --test &quot;Verify Phones Category Button&quot; $PROJECT_DIR$/tests/test_suite.robot" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="true" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="[default] Check Number Of Products Displayed" type="PythonConfigurationType" factoryName="Python">
       <module name="RobotFrameWork" />
       <option name="ENV_FILES" value="" />
@@ -158,6 +124,50 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="robot.run" />
       <option name="PARAMETERS" value=" -C ansi -v browser:chrome -t &quot;Check Number Of Products Displayed&quot; $PROJECT_DIR$/tests/check_number_of_products_displayed.robot" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="[default] Extract Product Data" type="PythonConfigurationType" factoryName="Python">
+      <module name="RobotFrameWork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/.venv_for_excel/Scripts/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="robot.run" />
+      <option name="PARAMETERS" value=" -C ansi -v browser:chrome -t &quot;Extract Product Data&quot; $PROJECT_DIR$/tests/testJson.robot" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="[default] Extract Test Data" type="PythonConfigurationType" factoryName="Python">
+      <module name="RobotFrameWork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/.venv_for_excel/Scripts/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="robot.run" />
+      <option name="PARAMETERS" value=" -C ansi -v browser:chrome -t &quot;Extract Test Data&quot; $PROJECT_DIR$/tests/testJson.robot" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="true" />
@@ -363,6 +373,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testJson.robot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="RobotFrameWork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/.venv_for_excel/Scripts/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="robot.run" />
+      <option name="PARAMETERS" value=" -C ansi -v browser:chrome --test &quot;*&quot; $PROJECT_DIR$/tests/testJson.robot" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_suite.robot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RobotFrameWork" />
       <option name="ENV_FILES" value="" />
@@ -385,20 +417,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="veridy_phone_details_with_json_file.robot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="RobotFrameWork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/.venv_for_excel/Scripts/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="robot.run" />
+      <option name="PARAMETERS" value=" -C ansi -v browser:chrome --test &quot;*&quot; $PROJECT_DIR$/tests/veridy_phone_details_with_json_file.robot" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.veridy_phone_details_with_json_file.robot" />
+        <item itemvalue="Python.testJson.robot" />
         <item itemvalue="Python.Verify Phone Details" />
         <item itemvalue="Python.check_number_of_products_displayed.robot" />
         <item itemvalue="Python.test_suite.robot" />
-        <item itemvalue="Python.Check Number Of Products Displayed" />
-        <item itemvalue="Python.Verify Phones Category Button" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+        <option value="bundled-python-sdk-1b1018131e27-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.180" />
       </set>
     </attachedChunks>
   </component>
@@ -451,7 +505,31 @@
       <option name="project" value="LOCAL" />
       <updated>1737886837831</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="crete an Excel helper file with reading methods">
+      <option name="closed" value="true" />
+      <created>1737891545253</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737891545253</updated>
+    </task>
+    <task id="LOCAL-00007" summary="create a test using Excel as a data feed">
+      <option name="closed" value="true" />
+      <created>1737891631409</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737891631409</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add Excel file to project">
+      <option name="closed" value="true" />
+      <created>1737891761004</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737891761004</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -460,6 +538,9 @@
     <MESSAGE value="Add another layer of abstraction, (selenium actions), split two scripts" />
     <MESSAGE value="add dockerfile and requirements file" />
     <MESSAGE value="removed unneeded wait from test" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unneeded wait from test" />
+    <MESSAGE value="crete an Excel helper file with reading methods" />
+    <MESSAGE value="create a test using Excel as a data feed" />
+    <MESSAGE value="add Excel file to project" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Excel file to project" />
   </component>
 </project>
