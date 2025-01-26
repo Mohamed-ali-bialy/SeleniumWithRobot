@@ -19,7 +19,7 @@ Wait for Element to Be Visible and Enabled
     Wait Until Element Is Visible    ${locator}    ${WAIT_TIME}
     Wait Until Element Is Enabled    ${locator}    ${WAIT_TIME}
 
-#method that takes an locatre and get elements
+#method that takes an locator and get elements texts
 Get Elements Text
     [Arguments]    ${locator}
    Wait for Element to Be Visible and Enabled    ${locator}
@@ -31,6 +31,7 @@ Get Elements Text
     END
     RETURN    ${text_list}
 
+#method that takes an locator and get element text
 Get Element Text
      [Arguments]    ${locator}
      Wait for Element to Be Visible and Enabled    ${locator}
