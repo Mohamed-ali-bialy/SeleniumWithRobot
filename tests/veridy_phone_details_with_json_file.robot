@@ -9,7 +9,7 @@ ${product_name}    HTC One M9
 
 *** Test Cases ***
 
-Verify Phone Details
+Verify Phone Details With Json File
     #open browser and maximize the window
     Open Demoblaze HomePage
 

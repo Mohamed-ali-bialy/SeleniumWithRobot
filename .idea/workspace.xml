@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c798a23-f1ca-452e-a58b-c16c2468e8c4" name="Changes" comment="add Excel file to project">
-      <change afterPath="$PROJECT_DIR$/productData.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/JsonHelper.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/veridy_phone_details_with_json_file.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/variables.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/variables.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/verify-phone-details.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/verify_phone_details.robot" afterDir="false" />
+    <list default="true" id="3c798a23-f1ca-452e-a58b-c16c2468e8c4" name="Changes" comment="crate a Json helper and add Json File Add another Test with Json File For Data Feed">
+      <change beforePath="$PROJECT_DIR$/tests/check_number_of_products_displayed_with_excel.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/check_number_of_products_displayed_with_excel.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/veridy_phone_details_with_json_file.robot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/veridy_phone_details_with_json_file.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +76,11 @@
       <recent name="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot\DataFiles" />
       <recent name="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.veridy_phone_details_with_json_file.robot">
+  <component name="RunManager" selected="Python.[default] Check Number Of Products Displayed With Excel Sheet">
     <configuration name="Verify Phone Details" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RobotFrameWork" />
       <option name="ENV_FILES" value="" />
@@ -102,6 +96,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="robot.run" />
       <option name="PARAMETERS" value=" -C ansi -v browser:chrome --test &quot;Verify Phone Details&quot; $PROJECT_DIR$/tests/test_suite.robot" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="[default] Check Number Of Products Displayed With Excel Sheet" type="PythonConfigurationType" factoryName="Python">
+      <module name="RobotFrameWork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/.venv_for_excel/Scripts/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="robot.run" />
+      <option name="PARAMETERS" value=" -C ansi -v browser:chrome -t &quot;Check Number Of Products Displayed With Excel Sheet&quot; $PROJECT_DIR$/tests/check_number_of_products_displayed_with_excel.robot" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="true" />
@@ -529,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737891761004</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="crate a Json helper and add Json File Add another Test with Json File For Data Feed">
+      <option name="closed" value="true" />
+      <created>1737895527406</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737895527406</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -541,6 +565,7 @@
     <MESSAGE value="crete an Excel helper file with reading methods" />
     <MESSAGE value="create a test using Excel as a data feed" />
     <MESSAGE value="add Excel file to project" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Excel file to project" />
+    <MESSAGE value="crate a Json helper and add Json File Add another Test with Json File For Data Feed" />
+    <option name="LAST_COMMIT_MESSAGE" value="crate a Json helper and add Json File Add another Test with Json File For Data Feed" />
   </component>
 </project>

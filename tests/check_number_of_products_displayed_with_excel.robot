@@ -4,7 +4,7 @@ Resource          ../resources/Helper.robot
 Resource          ../resources/ExcelHelper.robot
 
 *** Test Cases ***
-Check Number Of Products Displayed
+Check Number Of Products Displayed With Excel Sheet
 
     #open browser and maximize the window
     Open Demoblaze HomePage

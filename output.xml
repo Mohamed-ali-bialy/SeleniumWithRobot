@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.8 on win32)" generated="20250126 14:43:02.815" rpa="false" schemaversion="4">
-<suite id="s1" name="Veridy Phone Details With Json File" source="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot\tests\veridy_phone_details_with_json_file.robot">
-<test id="s1-t1" name="Verify Phone Details" line="12">
+<robot generator="Robot 6.1.1 (Python 3.12.8 on win32)" generated="20250126 14:48:25.669" rpa="false" schemaversion="4">
+<suite id="s1" name="Check Number Of Products Displayed With Excel" source="C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot\tests\check_number_of_products_displayed_with_excel.robot">
+<test id="s1-t1" name="Check Number Of Products Displayed With Excel Sheet" line="7">
 <kw name="Open Demoblaze HomePage" library="Helper">
 <kw name="Open Browser and Maximize" library="SeleniumActions">
 <arg>${URL}</arg>
@@ -10,350 +10,1042 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20250126 14:43:03.338" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
-<status status="PASS" starttime="20250126 14:43:03.337" endtime="20250126 14:43:09.497"/>
+<msg timestamp="20250126 14:48:27.625" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<status status="PASS" starttime="20250126 14:48:27.623" endtime="20250126 14:48:37.987"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20250126 14:43:09.497" endtime="20250126 14:43:09.663"/>
+<status status="PASS" starttime="20250126 14:48:37.987" endtime="20250126 14:48:38.054"/>
 </kw>
-<status status="PASS" starttime="20250126 14:43:03.337" endtime="20250126 14:43:09.663"/>
+<status status="PASS" starttime="20250126 14:48:27.623" endtime="20250126 14:48:38.054"/>
 </kw>
-<status status="PASS" starttime="20250126 14:43:03.337" endtime="20250126 14:43:09.663"/>
+<status status="PASS" starttime="20250126 14:48:27.622" endtime="20250126 14:48:38.055"/>
 </kw>
-<kw name="Navigate To Phones Page" library="Helper">
+<kw name="Get Card Elements Text" library="Helper">
+<var>${FIRST_PAGE_PRODUCTS_NAMES}</var>
+<kw name="Wait for Element to Be Visible and Enabled" library="SeleniumActions">
+<arg>${PRODUCT_CARDS_LOCATOR}</arg>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PHONES_BUTTON}</arg>
+<arg>${locator}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250126 14:43:09.664" endtime="20250126 14:43:09.994"/>
+<status status="PASS" starttime="20250126 14:48:38.059" endtime="20250126 14:48:39.056"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${WAIT_TIME}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20250126 14:48:39.056" endtime="20250126 14:48:39.144"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:38.057" endtime="20250126 14:48:39.144"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>${PRODUCT_CARDS_LOCATOR}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.165" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:39.144" endtime="20250126 14:48:39.165"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${text_list}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250126 14:48:39.166" level="INFO">${text_list} = []</msg>
+<status status="PASS" starttime="20250126 14:48:39.165" endtime="20250126 14:48:39.166"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{elements}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.225" level="INFO">${text} = Samsung galaxy s6</msg>
+<status status="PASS" starttime="20250126 14:48:39.167" endtime="20250126 14:48:39.225"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:39.225" endtime="20250126 14:48:39.226"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:39.167" endtime="20250126 14:48:39.226"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.77")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.266" level="INFO">${text} = Nokia lumia 1520</msg>
+<status status="PASS" starttime="20250126 14:48:39.226" endtime="20250126 14:48:39.266"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:39.267" endtime="20250126 14:48:39.267"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:39.226" endtime="20250126 14:48:39.267"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.78")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.321" level="INFO">${text} = Nexus 6</msg>
+<status status="PASS" starttime="20250126 14:48:39.268" endtime="20250126 14:48:39.322"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:39.325" endtime="20250126 14:48:39.326"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:39.267" endtime="20250126 14:48:39.326"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.79")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.343" level="INFO">${text} = Samsung galaxy s7</msg>
+<status status="PASS" starttime="20250126 14:48:39.327" endtime="20250126 14:48:39.343"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:39.344" endtime="20250126 14:48:39.344"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:39.326" endtime="20250126 14:48:39.344"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.80")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.399" level="INFO">${text} = Iphone 6 32gb</msg>
+<status status="PASS" starttime="20250126 14:48:39.345" endtime="20250126 14:48:39.399"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:39.399" endtime="20250126 14:48:39.400"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:39.344" endtime="20250126 14:48:39.400"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.81")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.418" level="INFO">${text} = Sony xperia z5</msg>
+<status status="PASS" starttime="20250126 14:48:39.401" endtime="20250126 14:48:39.418"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:39.419" endtime="20250126 14:48:39.419"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:39.401" endtime="20250126 14:48:39.419"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.82")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.477" level="INFO">${text} = HTC One M9</msg>
+<status status="PASS" starttime="20250126 14:48:39.420" endtime="20250126 14:48:39.477"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:39.477" endtime="20250126 14:48:39.478"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:39.419" endtime="20250126 14:48:39.478"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.83")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.500" level="INFO">${text} = Sony vaio i5</msg>
+<status status="PASS" starttime="20250126 14:48:39.479" endtime="20250126 14:48:39.500"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:39.500" endtime="20250126 14:48:39.500"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:39.478" endtime="20250126 14:48:39.500"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.84")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.523" level="INFO">${text} = Sony vaio i7</msg>
+<status status="PASS" starttime="20250126 14:48:39.501" endtime="20250126 14:48:39.523"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:39.524" endtime="20250126 14:48:39.524"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:39.501" endtime="20250126 14:48:39.524"/>
+</iter>
+<status status="PASS" starttime="20250126 14:48:39.166" endtime="20250126 14:48:39.524"/>
+</for>
+<return>
+<value>${text_list}</value>
+<status status="PASS" starttime="20250126 14:48:39.524" endtime="20250126 14:48:39.525"/>
+</return>
+<msg timestamp="20250126 14:48:39.525" level="INFO">${FIRST_PAGE_PRODUCTS_NAMES} = ['Samsung galaxy s6', 'Nokia lumia 1520', 'Nexus 6', 'Samsung galaxy s7', 'Iphone 6 32gb', 'Sony xperia z5', 'HTC One M9', 'Sony vaio i5', 'Sony vaio i7']</msg>
+<status status="PASS" starttime="20250126 14:48:38.055" endtime="20250126 14:48:39.525"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>FIRST_PAGE_PRODUCTS_NAMES: ${FIRST_PAGE_PRODUCTS_NAMES}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20250126 14:48:39.525" endtime="20250126 14:48:39.526"/>
+</kw>
+<kw name="Navigate and Wait for New Page" library="Helper">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${old_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:39.546" level="INFO">${old_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:39.527" endtime="20250126 14:48:39.546"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${PHONES_BUTTON}</arg>
+<arg>${next_button_locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250126 14:43:09.995" level="INFO">Clicking element 'xpath=//*[@onclick="byCat('phone')"]'.</msg>
-<status status="PASS" starttime="20250126 14:43:09.994" endtime="20250126 14:43:10.146"/>
+<msg timestamp="20250126 14:48:39.548" level="INFO">Clicking element 'xpath=//*[contains(@id,'next2')]'.</msg>
+<status status="PASS" starttime="20250126 14:48:39.547" endtime="20250126 14:48:40.247"/>
 </kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Phones</arg>
-<arg>${WAIT_TIME}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20250126 14:43:10.146" endtime="20250126 14:43:10.179"/>
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>0</value>
+<value>${INFINITE_NUMBER}</value>
+<iter>
+<var name="${counter}">0</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.284" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.248" endtime="20250126 14:48:40.284"/>
 </kw>
-<status status="PASS" starttime="20250126 14:43:09.664" endtime="20250126 14:43:10.179"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.284" endtime="20250126 14:48:40.285"/>
 </kw>
-<kw name="Open Phone Details Page" library="Helper">
-<arg>${product_name}</arg>
-<kw name="Replace String" library="String">
-<var>${formatted_xpath}</var>
-<arg>${TARGET_PHONE_ELEMENT}</arg>
-<arg>{product_name}</arg>
-<arg>${to_be_opened_phone_name}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<msg timestamp="20250126 14:43:10.180" level="INFO">${formatted_xpath} = xpath=//a[text()='HTC One M9']</msg>
-<status status="PASS" starttime="20250126 14:43:10.180" endtime="20250126 14:43:10.180"/>
+<status status="PASS" starttime="20250126 14:48:40.247" endtime="20250126 14:48:40.285"/>
+</iter>
+<iter>
+<var name="${counter}">1</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.303" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.285" endtime="20250126 14:48:40.303"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${formatted_xpath}</arg>
-<arg>${WAIT_TIME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250126 14:43:10.180" endtime="20250126 14:43:10.747"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.303" endtime="20250126 14:48:40.304"/>
 </kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${formatted_xpath}</arg>
-<arg>${WAIT_TIME}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250126 14:43:10.747" endtime="20250126 14:43:10.797"/>
+<status status="PASS" starttime="20250126 14:48:40.285" endtime="20250126 14:48:40.304"/>
+</iter>
+<iter>
+<var name="${counter}">2</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.322" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.305" endtime="20250126 14:48:40.322"/>
 </kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${phone_element}</var>
-<arg>${formatted_xpath}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20250126 14:43:10.809" level="INFO">${phone_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="af18c0b68180343560caf8c481dad54d", element="f.90EEA935851F7681D6EE05A107F850AB.d.B19780A14385507FB0A0591DB8510EE5.e.86")&gt;</msg>
-<status status="PASS" starttime="20250126 14:43:10.797" endtime="20250126 14:43:10.810"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.322" endtime="20250126 14:48:40.323"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${phone_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250126 14:43:10.810" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="af18c0b68180343560caf8c481dad54d", element="f.90EEA935851F7681D6EE05A107F850AB.d.B19780A14385507FB0A0591DB8510EE5.e.86")&gt;'.</msg>
-<status status="PASS" starttime="20250126 14:43:10.810" endtime="20250126 14:43:11.417"/>
+<status status="PASS" starttime="20250126 14:48:40.304" endtime="20250126 14:48:40.323"/>
+</iter>
+<iter>
+<var name="${counter}">3</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.342" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.324" endtime="20250126 14:48:40.343"/>
 </kw>
-<status status="PASS" starttime="20250126 14:43:10.179" endtime="20250126 14:43:11.417"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.343" endtime="20250126 14:48:40.343"/>
 </kw>
-<kw name="Get Phone Name From Details Page" library="Helper">
-<var>${PHONE_NAME_TEXT}</var>
-<kw name="Get Element Text" library="SeleniumActions">
-<var>${PHONE_NAME_TEXT}</var>
-<arg>${PRODUCT_NAME_IN_PAGE}</arg>
+<status status="PASS" starttime="20250126 14:48:40.324" endtime="20250126 14:48:40.344"/>
+</iter>
+<iter>
+<var name="${counter}">4</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.362" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.344" endtime="20250126 14:48:40.362"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.362" endtime="20250126 14:48:40.363"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:40.344" endtime="20250126 14:48:40.363"/>
+</iter>
+<iter>
+<var name="${counter}">5</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.452" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.364" endtime="20250126 14:48:40.452"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.453" endtime="20250126 14:48:40.453"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:40.364" endtime="20250126 14:48:40.453"/>
+</iter>
+<iter>
+<var name="${counter}">6</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.601" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.454" endtime="20250126 14:48:40.601"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.601" endtime="20250126 14:48:40.602"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:40.454" endtime="20250126 14:48:40.602"/>
+</iter>
+<iter>
+<var name="${counter}">7</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.622" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.603" endtime="20250126 14:48:40.622"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.622" endtime="20250126 14:48:40.623"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:40.602" endtime="20250126 14:48:40.623"/>
+</iter>
+<iter>
+<var name="${counter}">8</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.643" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.624" endtime="20250126 14:48:40.643"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.643" endtime="20250126 14:48:40.644"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:40.623" endtime="20250126 14:48:40.644"/>
+</iter>
+<iter>
+<var name="${counter}">9</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.662" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.645" endtime="20250126 14:48:40.662"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.662" endtime="20250126 14:48:40.663"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:40.644" endtime="20250126 14:48:40.663"/>
+</iter>
+<iter>
+<var name="${counter}">10</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.688" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.76")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.664" endtime="20250126 14:48:40.688"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20250126 14:48:40.688" endtime="20250126 14:48:40.689"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:40.663" endtime="20250126 14:48:40.689"/>
+</iter>
+<iter>
+<var name="${counter}">11</var>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${new_elements}</var>
+<arg>${old_elements_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.731" level="INFO">${new_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.99")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.690" endtime="20250126 14:48:40.731"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${old_elements}' != '${new_elements}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20250126 14:48:40.732" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20250126 14:48:40.731" endtime="20250126 14:48:40.733"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:40.689" endtime="20250126 14:48:40.733"/>
+</iter>
+<status status="PASS" starttime="20250126 14:48:40.247" endtime="20250126 14:48:40.733"/>
+</for>
+<status status="PASS" starttime="20250126 14:48:39.526" endtime="20250126 14:48:40.733"/>
+</kw>
+<kw name="Get Card Elements Text" library="Helper">
+<var>${SECOND_PAGE_PRODUCTS_NAMES}</var>
 <kw name="Wait for Element to Be Visible and Enabled" library="SeleniumActions">
-<arg>${locator}</arg>
+<arg>${PRODUCT_CARDS_LOCATOR}</arg>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250126 14:43:11.420" endtime="20250126 14:43:11.921"/>
+<status status="PASS" starttime="20250126 14:48:40.735" endtime="20250126 14:48:40.798"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>${WAIT_TIME}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250126 14:43:11.922" endtime="20250126 14:43:11.962"/>
+<status status="PASS" starttime="20250126 14:48:40.798" endtime="20250126 14:48:40.890"/>
 </kw>
-<status status="PASS" starttime="20250126 14:43:11.419" endtime="20250126 14:43:11.962"/>
+<status status="PASS" starttime="20250126 14:48:40.734" endtime="20250126 14:48:40.890"/>
 </kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${WEB_ELEMENT}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20250126 14:43:11.972" level="INFO">${WEB_ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="af18c0b68180343560caf8c481dad54d", element="f.90EEA935851F7681D6EE05A107F850AB.d.5CBD187FA54DEA0C130A61BE27AE5498.e.137")&gt;</msg>
-<status status="PASS" starttime="20250126 14:43:11.962" endtime="20250126 14:43:11.972"/>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>${PRODUCT_CARDS_LOCATOR}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20250126 14:48:40.918" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.99")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20250126 14:48:40.891" endtime="20250126 14:48:40.918"/>
 </kw>
+<kw name="Create List" library="BuiltIn">
+<var>${text_list}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250126 14:48:40.919" level="INFO">${text_list} = []</msg>
+<status status="PASS" starttime="20250126 14:48:40.918" endtime="20250126 14:48:40.919"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{elements}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.99")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
-<var>${TEXT}</var>
-<arg>${WEB_ELEMENT}</arg>
+<var>${text}</var>
+<arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250126 14:43:11.988" level="INFO">${TEXT} = HTC One M9</msg>
-<status status="PASS" starttime="20250126 14:43:11.973" endtime="20250126 14:43:11.988"/>
+<msg timestamp="20250126 14:48:40.976" level="INFO">${text} = Apple monitor 24</msg>
+<status status="PASS" starttime="20250126 14:48:40.919" endtime="20250126 14:48:40.976"/>
 </kw>
-<return>
-<value>${TEXT}</value>
-<status status="PASS" starttime="20250126 14:43:11.988" endtime="20250126 14:43:11.988"/>
-</return>
-<msg timestamp="20250126 14:43:11.989" level="INFO">${PHONE_NAME_TEXT} = HTC One M9</msg>
-<status status="PASS" starttime="20250126 14:43:11.418" endtime="20250126 14:43:11.989"/>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:40.976" endtime="20250126 14:48:40.977"/>
 </kw>
-<return>
-<value>${PHONE_NAME_TEXT}</value>
-<status status="PASS" starttime="20250126 14:43:11.989" endtime="20250126 14:43:11.989"/>
-</return>
-<msg timestamp="20250126 14:43:11.989" level="INFO">${PHONE_NAME_TEXT} = HTC One M9</msg>
-<status status="PASS" starttime="20250126 14:43:11.417" endtime="20250126 14:43:11.989"/>
-</kw>
-<kw name="Get Phone Price From Details Page" library="Helper">
-<var>${PHONE_PRICE_TEXT}</var>
-<kw name="Get Element Text" library="SeleniumActions">
-<var>${PHONE_PRICE_TEXT}</var>
-<arg>${PRODUCT_PRICE}</arg>
-<kw name="Wait for Element to Be Visible and Enabled" library="SeleniumActions">
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${WAIT_TIME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250126 14:43:11.990" endtime="20250126 14:43:12.014"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${WAIT_TIME}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250126 14:43:12.014" endtime="20250126 14:43:12.047"/>
-</kw>
-<status status="PASS" starttime="20250126 14:43:11.989" endtime="20250126 14:43:12.047"/>
-</kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${WEB_ELEMENT}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20250126 14:43:12.060" level="INFO">${WEB_ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="af18c0b68180343560caf8c481dad54d", element="f.90EEA935851F7681D6EE05A107F850AB.d.5CBD187FA54DEA0C130A61BE27AE5498.e.138")&gt;</msg>
-<status status="PASS" starttime="20250126 14:43:12.048" endtime="20250126 14:43:12.060"/>
-</kw>
+<status status="PASS" starttime="20250126 14:48:40.919" endtime="20250126 14:48:40.977"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.100")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
-<var>${TEXT}</var>
-<arg>${WEB_ELEMENT}</arg>
+<var>${text}</var>
+<arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250126 14:43:12.074" level="INFO">${TEXT} = $700 *includes tax</msg>
-<status status="PASS" starttime="20250126 14:43:12.060" endtime="20250126 14:43:12.074"/>
+<msg timestamp="20250126 14:48:40.999" level="INFO">${text} = MacBook air</msg>
+<status status="PASS" starttime="20250126 14:48:40.977" endtime="20250126 14:48:40.999"/>
 </kw>
-<return>
-<value>${TEXT}</value>
-<status status="PASS" starttime="20250126 14:43:12.074" endtime="20250126 14:43:12.074"/>
-</return>
-<msg timestamp="20250126 14:43:12.075" level="INFO">${PHONE_PRICE_TEXT} = $700 *includes tax</msg>
-<status status="PASS" starttime="20250126 14:43:11.989" endtime="20250126 14:43:12.075"/>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:40.999" endtime="20250126 14:48:41.000"/>
 </kw>
-<return>
-<value>${PHONE_PRICE_TEXT}</value>
-<status status="PASS" starttime="20250126 14:43:12.075" endtime="20250126 14:43:12.075"/>
-</return>
-<msg timestamp="20250126 14:43:12.075" level="INFO">${PHONE_PRICE_TEXT} = $700 *includes tax</msg>
-<status status="PASS" starttime="20250126 14:43:11.989" endtime="20250126 14:43:12.075"/>
-</kw>
-<kw name="Get Phone Description From Details Page" library="Helper">
-<var>${PHONE_DESCRIPTION_TEXT}</var>
-<kw name="Get Element Text" library="SeleniumActions">
-<var>${PHONE_DESCRIPTION_TEXT}</var>
-<arg>${PRODUCT_DESCRIPTION}</arg>
-<kw name="Wait for Element to Be Visible and Enabled" library="SeleniumActions">
-<arg>${locator}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${WAIT_TIME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250126 14:43:12.077" endtime="20250126 14:43:12.110"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>${WAIT_TIME}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20250126 14:43:12.110" endtime="20250126 14:43:12.141"/>
-</kw>
-<status status="PASS" starttime="20250126 14:43:12.076" endtime="20250126 14:43:12.142"/>
-</kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${WEB_ELEMENT}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20250126 14:43:12.162" level="INFO">${WEB_ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="af18c0b68180343560caf8c481dad54d", element="f.90EEA935851F7681D6EE05A107F850AB.d.5CBD187FA54DEA0C130A61BE27AE5498.e.139")&gt;</msg>
-<status status="PASS" starttime="20250126 14:43:12.142" endtime="20250126 14:43:12.162"/>
-</kw>
+<status status="PASS" starttime="20250126 14:48:40.977" endtime="20250126 14:48:41.000"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.101")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
-<var>${TEXT}</var>
-<arg>${WEB_ELEMENT}</arg>
+<var>${text}</var>
+<arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250126 14:43:12.175" level="INFO">${TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
-<status status="PASS" starttime="20250126 14:43:12.162" endtime="20250126 14:43:12.175"/>
+<msg timestamp="20250126 14:48:41.020" level="INFO">${text} = Dell i7 8gb</msg>
+<status status="PASS" starttime="20250126 14:48:41.000" endtime="20250126 14:48:41.020"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.021" endtime="20250126 14:48:41.021"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.000" endtime="20250126 14:48:41.021"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.102")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:41.053" level="INFO">${text} = 2017 Dell 15.6 Inch</msg>
+<status status="PASS" starttime="20250126 14:48:41.022" endtime="20250126 14:48:41.053"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.054" endtime="20250126 14:48:41.054"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.021" endtime="20250126 14:48:41.054"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.103")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:41.071" level="INFO">${text} = ASUS Full HD</msg>
+<status status="PASS" starttime="20250126 14:48:41.055" endtime="20250126 14:48:41.071"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.071" endtime="20250126 14:48:41.072"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.054" endtime="20250126 14:48:41.072"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="de73cebb12f49d3a0d8649d437300507", element="f.39DBB0336BF13DC956A9087ADEDAFDC0.d.79CD7E940ECFDC0914509C333D5169DF.e.104")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250126 14:48:41.088" level="INFO">${text} = MacBook Pro</msg>
+<status status="PASS" starttime="20250126 14:48:41.072" endtime="20250126 14:48:41.089"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${text_list}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.089" endtime="20250126 14:48:41.090"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.072" endtime="20250126 14:48:41.090"/>
+</iter>
+<status status="PASS" starttime="20250126 14:48:40.919" endtime="20250126 14:48:41.090"/>
+</for>
+<return>
+<value>${text_list}</value>
+<status status="PASS" starttime="20250126 14:48:41.090" endtime="20250126 14:48:41.090"/>
+</return>
+<msg timestamp="20250126 14:48:41.091" level="INFO">${SECOND_PAGE_PRODUCTS_NAMES} = ['Apple monitor 24', 'MacBook air', 'Dell i7 8gb', '2017 Dell 15.6 Inch', 'ASUS Full HD', 'MacBook Pro']</msg>
+<status status="PASS" starttime="20250126 14:48:40.733" endtime="20250126 14:48:41.091"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>SECOND_PAGE_PRODUCTS_NAMES: ${SECOND_PAGE_PRODUCTS_NAMES}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20250126 14:48:41.091" endtime="20250126 14:48:41.091"/>
+</kw>
+<kw name="Merge Lists" library="Helper">
+<var>${ALL_PRODUCTS_NAMES}</var>
+<arg>${FIRST_PAGE_PRODUCTS_NAMES}</arg>
+<arg>${SECOND_PAGE_PRODUCTS_NAMES}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${merged_list}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250126 14:48:41.093" level="INFO">${merged_list} = []</msg>
+<status status="PASS" starttime="20250126 14:48:41.092" endtime="20250126 14:48:41.093"/>
+</kw>
+<for flavor="IN">
+<var>${item}</var>
+<value>@{list1}</value>
+<iter>
+<var name="${item}">Samsung galaxy s6</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.093" endtime="20250126 14:48:41.094"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.093" endtime="20250126 14:48:41.094"/>
+</iter>
+<iter>
+<var name="${item}">Nokia lumia 1520</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.094" endtime="20250126 14:48:41.095"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.094" endtime="20250126 14:48:41.095"/>
+</iter>
+<iter>
+<var name="${item}">Nexus 6</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.095" endtime="20250126 14:48:41.095"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.095" endtime="20250126 14:48:41.095"/>
+</iter>
+<iter>
+<var name="${item}">Samsung galaxy s7</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.096" endtime="20250126 14:48:41.096"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.096" endtime="20250126 14:48:41.096"/>
+</iter>
+<iter>
+<var name="${item}">Iphone 6 32gb</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.097" endtime="20250126 14:48:41.097"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.097" endtime="20250126 14:48:41.097"/>
+</iter>
+<iter>
+<var name="${item}">Sony xperia z5</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.097" endtime="20250126 14:48:41.098"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.097" endtime="20250126 14:48:41.098"/>
+</iter>
+<iter>
+<var name="${item}">HTC One M9</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.098" endtime="20250126 14:48:41.098"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.098" endtime="20250126 14:48:41.098"/>
+</iter>
+<iter>
+<var name="${item}">Sony vaio i5</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.099" endtime="20250126 14:48:41.099"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.099" endtime="20250126 14:48:41.099"/>
+</iter>
+<iter>
+<var name="${item}">Sony vaio i7</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.099" endtime="20250126 14:48:41.100"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.099" endtime="20250126 14:48:41.100"/>
+</iter>
+<status status="PASS" starttime="20250126 14:48:41.093" endtime="20250126 14:48:41.100"/>
+</for>
+<for flavor="IN">
+<var>${item}</var>
+<value>@{list2}</value>
+<iter>
+<var name="${item}">Apple monitor 24</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.100" endtime="20250126 14:48:41.100"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.100" endtime="20250126 14:48:41.100"/>
+</iter>
+<iter>
+<var name="${item}">MacBook air</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.101" endtime="20250126 14:48:41.101"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.101" endtime="20250126 14:48:41.101"/>
+</iter>
+<iter>
+<var name="${item}">Dell i7 8gb</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.102" endtime="20250126 14:48:41.102"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.101" endtime="20250126 14:48:41.102"/>
+</iter>
+<iter>
+<var name="${item}">2017 Dell 15.6 Inch</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.103" endtime="20250126 14:48:41.103"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.102" endtime="20250126 14:48:41.103"/>
+</iter>
+<iter>
+<var name="${item}">ASUS Full HD</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.103" endtime="20250126 14:48:41.104"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.103" endtime="20250126 14:48:41.104"/>
+</iter>
+<iter>
+<var name="${item}">MacBook Pro</var>
+<kw name="Append To List" library="Collections">
+<arg>${merged_list}</arg>
+<arg>${item}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.104" endtime="20250126 14:48:41.105"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.104" endtime="20250126 14:48:41.105"/>
+</iter>
+<status status="PASS" starttime="20250126 14:48:41.100" endtime="20250126 14:48:41.105"/>
+</for>
+<return>
+<value>${merged_list}</value>
+<status status="PASS" starttime="20250126 14:48:41.105" endtime="20250126 14:48:41.105"/>
+</return>
+<msg timestamp="20250126 14:48:41.105" level="INFO">${ALL_PRODUCTS_NAMES} = ['Samsung galaxy s6', 'Nokia lumia 1520', 'Nexus 6', 'Samsung galaxy s7', 'Iphone 6 32gb', 'Sony xperia z5', 'HTC One M9', 'Sony vaio i5', 'Sony vaio i7', 'Apple monitor 24', 'MacBook air', 'Dell i7 8...</msg>
+<status status="PASS" starttime="20250126 14:48:41.092" endtime="20250126 14:48:41.106"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${ALL_PRODUCTS_NAMES_COUNT}</var>
+<arg>${ALL_PRODUCTS_NAMES}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20250126 14:48:41.106" level="INFO">Length is 15</msg>
+<msg timestamp="20250126 14:48:41.106" level="INFO">${ALL_PRODUCTS_NAMES_COUNT} = 15</msg>
+<status status="PASS" starttime="20250126 14:48:41.106" endtime="20250126 14:48:41.106"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>all products: ${ALL_PRODUCTS_NAMES}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20250126 14:48:41.107" endtime="20250126 14:48:41.107"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>all products length:${ALL_PRODUCTS_NAMES_COUNT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20250126 14:48:41.107" endtime="20250126 14:48:41.108"/>
+</kw>
+<kw name="Open Excel and Count Rows" library="ExcelHelper">
+<var>${EXPECTED_PRODUCTS_NUMBER_FROM_EXCEL}</var>
+<arg>${excel_file_path}</arg>
+<arg>${PRODUCTS_SHEET_NAME}</arg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Method Read Excel Count</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20250126 14:48:41.109" endtime="20250126 14:48:41.109"/>
+</kw>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${FILE_PATH}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250126 14:48:41.243" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x0000027F33D4CCE0&gt;</msg>
+<status status="PASS" starttime="20250126 14:48:41.109" endtime="20250126 14:48:41.243"/>
+</kw>
+<kw name="Read Worksheet" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>${SHEET_NAME}</arg>
+<arg>header=True</arg>
+<doc>Read the content of a worksheet into a list of dictionaries.</doc>
+<msg timestamp="20250126 14:48:41.245" level="INFO">${rows} = [{'ProductName': 'Samsung galaxy s6', 'Description': None, 'Price': None}, {'ProductName': 'Nokia lumia 1520', 'Description': None, 'Price': None}, {'ProductName': 'Nexus 6', 'Description': None, 'Pri...</msg>
+<status status="PASS" starttime="20250126 14:48:41.243" endtime="20250126 14:48:41.245"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${row_count}</var>
+<arg>${rows}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20250126 14:48:41.246" level="INFO">Length is 15</msg>
+<msg timestamp="20250126 14:48:41.246" level="INFO">${row_count} = 15</msg>
+<status status="PASS" starttime="20250126 14:48:41.246" endtime="20250126 14:48:41.246"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250126 14:48:41.246" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x0000027F33D4CCE0&gt;</msg>
+<status status="PASS" starttime="20250126 14:48:41.246" endtime="20250126 14:48:41.247"/>
 </kw>
 <return>
-<value>${TEXT}</value>
-<status status="PASS" starttime="20250126 14:43:12.175" endtime="20250126 14:43:12.176"/>
+<value>${row_count}</value>
+<status status="PASS" starttime="20250126 14:48:41.247" endtime="20250126 14:48:41.247"/>
 </return>
-<msg timestamp="20250126 14:43:12.176" level="INFO">${PHONE_DESCRIPTION_TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
-<status status="PASS" starttime="20250126 14:43:12.076" endtime="20250126 14:43:12.176"/>
+<msg timestamp="20250126 14:48:41.247" level="INFO">${EXPECTED_PRODUCTS_NUMBER_FROM_EXCEL} = 15</msg>
+<status status="PASS" starttime="20250126 14:48:41.108" endtime="20250126 14:48:41.247"/>
 </kw>
+<kw name="Get Specific Column" library="ExcelHelper">
+<var>${EXPECTED_PRODUCTS_NAMES_FROM_EXCEL}</var>
+<arg>${excel_file_path}</arg>
+<arg>${PRODUCTS_SHEET_NAME}</arg>
+<arg>ProductName</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${file_path}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250126 14:48:41.268" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x0000027F33CF39B0&gt;</msg>
+<status status="PASS" starttime="20250126 14:48:41.248" endtime="20250126 14:48:41.268"/>
+</kw>
+<kw name="Read Worksheet" library="RPA.Excel.Files">
+<var>${data}</var>
+<arg>${sheet_name}</arg>
+<arg>header=True</arg>
+<doc>Read the content of a worksheet into a list of dictionaries.</doc>
+<msg timestamp="20250126 14:48:41.270" level="INFO">${data} = [{'ProductName': 'Samsung galaxy s6', 'Description': None, 'Price': None}, {'ProductName': 'Nokia lumia 1520', 'Description': None, 'Price': None}, {'ProductName': 'Nexus 6', 'Description': None, 'Pri...</msg>
+<status status="PASS" starttime="20250126 14:48:41.268" endtime="20250126 14:48:41.270"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250126 14:48:41.271" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x0000027F33CF39B0&gt;</msg>
+<status status="PASS" starttime="20250126 14:48:41.270" endtime="20250126 14:48:41.271"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${column_data}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250126 14:48:41.271" level="INFO">${column_data} = []</msg>
+<status status="PASS" starttime="20250126 14:48:41.271" endtime="20250126 14:48:41.271"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{data}</value>
+<iter>
+<var name="${row}">{'ProductName': 'Samsung galaxy s6', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.274" endtime="20250126 14:48:41.274"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.273" endtime="20250126 14:48:41.274"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'Nokia lumia 1520', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.274" endtime="20250126 14:48:41.275"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.274" endtime="20250126 14:48:41.275"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'Nexus 6', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.275" endtime="20250126 14:48:41.276"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.275" endtime="20250126 14:48:41.276"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'Samsung galaxy s7', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.276" endtime="20250126 14:48:41.277"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.276" endtime="20250126 14:48:41.277"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'Iphone 6 32gb', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.277" endtime="20250126 14:48:41.277"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.277" endtime="20250126 14:48:41.277"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'Sony xperia z5', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.278" endtime="20250126 14:48:41.278"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.277" endtime="20250126 14:48:41.278"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'HTC One M9', 'Description': 'The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage tha...</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.278" endtime="20250126 14:48:41.279"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.278" endtime="20250126 14:48:41.279"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'Sony vaio i5', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.279" endtime="20250126 14:48:41.280"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.279" endtime="20250126 14:48:41.280"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'Sony vaio i7', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.280" endtime="20250126 14:48:41.281"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.280" endtime="20250126 14:48:41.281"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'Apple monitor 24', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.282" endtime="20250126 14:48:41.282"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.281" endtime="20250126 14:48:41.282"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'MacBook air', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.283" endtime="20250126 14:48:41.342"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.282" endtime="20250126 14:48:41.342"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'Dell i7 8gb', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.342" endtime="20250126 14:48:41.343"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.342" endtime="20250126 14:48:41.343"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': '2017 Dell 15.6 Inch', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.343" endtime="20250126 14:48:41.344"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.343" endtime="20250126 14:48:41.344"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'ASUS Full HD', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.344" endtime="20250126 14:48:41.344"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.344" endtime="20250126 14:48:41.344"/>
+</iter>
+<iter>
+<var name="${row}">{'ProductName': 'MacBook Pro', 'Description': None, 'Price': None}</var>
+<kw name="Append To List" library="Collections">
+<arg>${column_data}</arg>
+<arg>${row}[${column_name}]</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250126 14:48:41.345" endtime="20250126 14:48:41.345"/>
+</kw>
+<status status="PASS" starttime="20250126 14:48:41.344" endtime="20250126 14:48:41.345"/>
+</iter>
+<status status="PASS" starttime="20250126 14:48:41.273" endtime="20250126 14:48:41.345"/>
+</for>
 <return>
-<value>${PHONE_DESCRIPTION_TEXT}</value>
-<status status="PASS" starttime="20250126 14:43:12.176" endtime="20250126 14:43:12.176"/>
+<value>${column_data}</value>
+<status status="PASS" starttime="20250126 14:48:41.345" endtime="20250126 14:48:41.345"/>
 </return>
-<msg timestamp="20250126 14:43:12.176" level="INFO">${PHONE_DESCRIPTION_TEXT} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
-<status status="PASS" starttime="20250126 14:43:12.075" endtime="20250126 14:43:12.176"/>
+<msg timestamp="20250126 14:48:41.346" level="INFO">${EXPECTED_PRODUCTS_NAMES_FROM_EXCEL} = ['Samsung galaxy s6', 'Nokia lumia 1520', 'Nexus 6', 'Samsung galaxy s7', 'Iphone 6 32gb', 'Sony xperia z5', 'HTC One M9', 'Sony vaio i5', 'Sony vaio i7', 'Apple monitor 24', 'MacBook air', 'Dell i7 8...</msg>
+<status status="PASS" starttime="20250126 14:48:41.247" endtime="20250126 14:48:41.346"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${PHONE_NAME_TEXT}</arg>
+<arg>EXPECTED_PRODUCTS_NUMBER_FROM_EXCEL:${EXPECTED_PRODUCTS_NUMBER_FROM_EXCEL}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250126 14:43:12.176" endtime="20250126 14:43:12.177"/>
+<status status="PASS" starttime="20250126 14:48:41.350" endtime="20250126 14:48:41.350"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${PHONE_PRICE_TEXT}</arg>
+<arg>EXPECTED_PRODUCTS_NAMES_FROM_EXCEL:${EXPECTED_PRODUCTS_NAMES_FROM_EXCEL}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250126 14:43:12.177" endtime="20250126 14:43:12.177"/>
+<status status="PASS" starttime="20250126 14:48:41.351" endtime="20250126 14:48:41.352"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${PHONE_DESCRIPTION_TEXT}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250126 14:43:12.177" endtime="20250126 14:43:12.177"/>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${ALL_PRODUCTS_NAMES_COUNT}</arg>
+<arg>${EXPECTED_PRODUCTS_NUMBER_FROM_EXCEL}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" starttime="20250126 14:48:41.352" endtime="20250126 14:48:41.352"/>
 </kw>
-<kw name="Extract Product Data" library="JsonHelper">
-<var>${PRODUCT_JSON_BODY}</var>
-<arg>${JSON_FILE_PATH}</arg>
-<arg>${product_name}</arg>
-<kw name="Get File" library="OperatingSystem">
-<var>${file_content}</var>
-<arg>${JSON_FILE_PATH}</arg>
-<doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20250126 14:43:12.178" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot\DataFiles\productData.json"&gt;C:\Users\z0052yyt\PycharmProjects\SeleniumWithRobot\DataFiles\productData.json&lt;/a&gt;'.</msg>
-<msg timestamp="20250126 14:43:12.195" level="INFO">${file_content} = {
-    "Samsung galaxy s6": {
-        "price": "$360 *includes tax",
-        "description": "Samsung Galaxy S6 is the latest smartphone with advanced features and a sleek design."
-    },
-    "Nokia lum...</msg>
-<status status="PASS" starttime="20250126 14:43:12.178" endtime="20250126 14:43:12.195"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${JSON_PRODUCTS}</var>
-<arg>json.loads('''${file_content}''')</arg>
-<arg>json</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20250126 14:43:12.196" level="INFO">${JSON_PRODUCTS} = {'Samsung galaxy s6': {'price': '$360 *includes tax', 'description': 'Samsung Galaxy S6 is the latest smartphone with advanced features and a sleek design.'}, 'Nokia lumia 1520': {'price': '$820 *incl...</msg>
-<status status="PASS" starttime="20250126 14:43:12.195" endtime="20250126 14:43:12.196"/>
-</kw>
-<kw name="Get From Dictionary" library="Collections">
-<var>${PRODUCT_DATA}</var>
-<arg>${JSON_PRODUCTS}</arg>
-<arg>${JSON_PRODUCT_NAME}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20250126 14:43:12.197" level="INFO">${PRODUCT_DATA} = {'price': '$700 *includes tax', 'description': 'The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage t...</msg>
-<status status="PASS" starttime="20250126 14:43:12.196" endtime="20250126 14:43:12.197"/>
-</kw>
-<return>
-<value>${PRODUCT_DATA}</value>
-<status status="PASS" starttime="20250126 14:43:12.197" endtime="20250126 14:43:12.197"/>
-</return>
-<msg timestamp="20250126 14:43:12.197" level="INFO">${PRODUCT_JSON_BODY} = {'price': '$700 *includes tax', 'description': 'The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage t...</msg>
-<status status="PASS" starttime="20250126 14:43:12.178" endtime="20250126 14:43:12.197"/>
-</kw>
-<kw name="Extract Attribute From Json" library="JsonHelper">
-<var>${EXPECTED_PRICE_FROM_JSON}</var>
-<arg>${PRODUCT_JSON_BODY}</arg>
-<arg>price</arg>
-<kw name="Get From Dictionary" library="Collections">
-<var>${RETURN_ATTRIBUTE}</var>
-<arg>${JSON_BODY}</arg>
-<arg>${ATTRIBUTE}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20250126 14:43:12.198" level="INFO">${RETURN_ATTRIBUTE} = $700 *includes tax</msg>
-<status status="PASS" starttime="20250126 14:43:12.198" endtime="20250126 14:43:12.198"/>
-</kw>
-<return>
-<value>${RETURN_ATTRIBUTE}</value>
-<status status="PASS" starttime="20250126 14:43:12.198" endtime="20250126 14:43:12.198"/>
-</return>
-<msg timestamp="20250126 14:43:12.199" level="INFO">${EXPECTED_PRICE_FROM_JSON} = $700 *includes tax</msg>
-<status status="PASS" starttime="20250126 14:43:12.197" endtime="20250126 14:43:12.199"/>
-</kw>
-<kw name="Extract Attribute From Json" library="JsonHelper">
-<var>${EXPECTED_DESCRIPTION_FROM_JSON}</var>
-<arg>${PRODUCT_JSON_BODY}</arg>
-<arg>description</arg>
-<kw name="Get From Dictionary" library="Collections">
-<var>${RETURN_ATTRIBUTE}</var>
-<arg>${JSON_BODY}</arg>
-<arg>${ATTRIBUTE}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20250126 14:43:12.200" level="INFO">${RETURN_ATTRIBUTE} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
-<status status="PASS" starttime="20250126 14:43:12.199" endtime="20250126 14:43:12.200"/>
-</kw>
-<return>
-<value>${RETURN_ATTRIBUTE}</value>
-<status status="PASS" starttime="20250126 14:43:12.200" endtime="20250126 14:43:12.200"/>
-</return>
-<msg timestamp="20250126 14:43:12.200" level="INFO">${EXPECTED_DESCRIPTION_FROM_JSON} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
-<status status="PASS" starttime="20250126 14:43:12.199" endtime="20250126 14:43:12.200"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>{PRODUCT_JSON_BODY}:${PRODUCT_JSON_BODY}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250126 14:43:12.200" endtime="20250126 14:43:12.201"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>{PRICE}:${EXPECTED_PRICE_FROM_JSON}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250126 14:43:12.201" endtime="20250126 14:43:12.201"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>{DESCRIPTION}:${EXPECTED_DESCRIPTION_FROM_JSON}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20250126 14:43:12.201" endtime="20250126 14:43:12.201"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${PHONE_PRICE_TEXT}</arg>
-<arg>${EXPECTED_PRICE_FROM_JSON}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20250126 14:43:12.202" endtime="20250126 14:43:12.202"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${PHONE_DESCRIPTION_TEXT}</arg>
-<arg>${EXPECTED_DESCRIPTION_FROM_JSON}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20250126 14:43:12.202" endtime="20250126 14:43:12.202"/>
+<kw name="Lists Should Be Equal" library="Collections">
+<arg>${ALL_PRODUCTS_NAMES}</arg>
+<arg>${EXPECTED_PRODUCTS_NAMES_FROM_EXCEL}</arg>
+<doc>Fails if given lists are unequal.</doc>
+<status status="PASS" starttime="20250126 14:48:41.352" endtime="20250126 14:48:41.353"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20250126 14:43:12.202" endtime="20250126 14:43:14.934"/>
+<status status="PASS" starttime="20250126 14:48:41.354" endtime="20250126 14:48:45.872"/>
 </kw>
-<status status="PASS" starttime="20250126 14:43:03.336" endtime="20250126 14:43:14.934"/>
+<status status="PASS" starttime="20250126 14:48:27.621" endtime="20250126 14:48:45.873"/>
 </test>
-<status status="PASS" starttime="20250126 14:43:02.818" endtime="20250126 14:43:14.936"/>
+<status status="PASS" starttime="20250126 14:48:25.672" endtime="20250126 14:48:45.874"/>
 </suite>
 <statistics>
 <total>
@@ -362,7 +1054,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Veridy Phone Details With Json File">Veridy Phone Details With Json File</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Check Number Of Products Displayed With Excel">Check Number Of Products Displayed With Excel</stat>
 </suite>
 </statistics>
 <errors>
