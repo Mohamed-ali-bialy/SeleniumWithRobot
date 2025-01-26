@@ -24,10 +24,6 @@ Verify Phone Details
     #open required phone page
     Open Phone Details Page    ${product_name}
 
-    #wait until elements are visible and enabled
-    Wait Until Element Is Visible   ${PRODUCT_NAME_IN_PAGE}      ${WAIT_TIME}
-    Wait Until Element Is Enabled   ${PRODUCT_NAME_IN_PAGE}      ${WAIT_TIME}
-
     #get actual texts from phone page
     ${PHONE_NAME_TEXT} =    Get Phone Name From Details Page
     ${PHONE_PRICE_TEXT} =    Get Phone Price From Details Page
