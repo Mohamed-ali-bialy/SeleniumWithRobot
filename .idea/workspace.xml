@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c798a23-f1ca-452e-a58b-c16c2468e8c4" name="Changes" comment="add dockerfile and requirements file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Helper.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Helper.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/SeleniumActions.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/SeleniumActions.robot" afterDir="false" />
-    </list>
+    <list default="true" id="3c798a23-f1ca-452e-a58b-c16c2468e8c4" name="Changes" comment="Create a method for getting texts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -439,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737826615945</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create a method for getting texts">
+      <option name="closed" value="true" />
+      <created>1737827124195</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737827124195</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -447,6 +451,7 @@
     <MESSAGE value="apply an abstraction layer for the first script" />
     <MESSAGE value="Add another layer of abstraction, (selenium actions), split two scripts" />
     <MESSAGE value="add dockerfile and requirements file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dockerfile and requirements file" />
+    <MESSAGE value="Create a method for getting texts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a method for getting texts" />
   </component>
 </project>
